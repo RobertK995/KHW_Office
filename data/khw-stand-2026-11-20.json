@@ -1,0 +1,4795 @@
+{
+  "app": "KHW Office",
+  "saved": "2026-11-20T19:43:43.115Z",
+  "store": {
+    "offers": {},
+    "drafts": {},
+    "contracts": [],
+    "bookings": [],
+    "wrestlers": {},
+    "shows": {},
+    "extras": [],
+    "game": {},
+    "titles": {},
+    "series": {},
+    "added": [],
+    "staff": {}
+  },
+  "idb": {
+    "nextId": 2079,
+    "lists": [
+      {
+        "id": 1485,
+        "name": "Vertrag: Zugeständnisse",
+        "entries": [
+          {
+            "id": 1486,
+            "text": "Alle Rechte am Namen '{person}'",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1487,
+            "text": "eine Rückerstattung von {vertrag:feld=alternative;mal=0.1;runden=0.01} Euro bei vorzeitigem Vertragsende",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1488,
+            "text": "eine Rückerstattung von {vertrag:feld=alternative;mal=0.2;runden=0.01} Euro bei vorzeitigem Vertragsende",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1489,
+            "text": "50% Selbstbeteiligung an neuen Kostümen",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1490,
+            "text": "eine Verpflichtung zur Übernahme von {wahl:aus=25|50|75}% aller medizinischen Behandlungskosten",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1491,
+            "text": "die Verpflichtung zur Abgabe von {zahl:von=500;bis=2000} Euro an die Promotion für jeden externen Auftritt (Filme, andere Ligen, Autogrammstunden)",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1492,
+            "text": "in den nächsten {zahl:von=3;bis=6} Matches eine Niederlage ohne Widerspruch gegen jeden beliebigen Gegner zu akzeptieren",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1493,
+            "text": "Verpflichtung zu {zahl:von=5;bis=10} unentgeltliche Auftritte bei Sponsoren-Events oder Wohltätigkeitsveranstaltungen pro Jahr",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1494,
+            "text": "als Test-Gegner für {zahl:von=3;bis=5} neue Wrestler anzutreten,",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1495,
+            "text": "kein Essen vom Catering für den privaten Verzehr mit nach Hause nehmen (Strafe: 50 Euro pro Tupperware-Dose)",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1496,
+            "text": "eine Strafezahlung von 100 Euro für jedes Fluchen in Hörweite von Fans oder Sponsoren",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1497,
+            "text": "25% Selbstbeteiligung an neuen Kostümen",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1498,
+            "text": "25% Selbstbeteiligung an neuen Kostümen",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1499,
+            "text": "25% Selbstbeteiligung an medizinischen Behandlungskosten",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1500,
+            "text": "25% Selbstbeteiligung an medizinischen Behandlungskosten",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1501,
+            "text": "kostenlose Werbung bei den ersten 2 Shows an denen {person:feld=geschlecht;wenn1=m;dann1=er;sonst=sie} teilnimmt",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1502,
+            "text": "einen Skillpunkt",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1503,
+            "text": "einen einmaligen kostenlosen Comeback Auftirtt von {wrestler:besonderheit=EX KHW}",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1504,
+            "text": "einen einmaligen kostenlosen Comeback Auftirtt von {wrestler:besonderheit=EX KHW}",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1505,
+            "text": "kostenlosen Einsatz von großen Verbrauchsgegenständen (Leitern und Tische), bei {zahl:von=2;bis=6} Shows",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1506,
+            "text": "kostenlosen Einsatz von  kleinen Verbrauchsgegenständen (Sticks und Stühle), bei {zahl:von=5;bis=10} Shows",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1507,
+            "text": "kiene Besonderheiten",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1508,
+            "text": "kiene Besonderheiten",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1509,
+            "text": "kiene Besonderheiten",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1510,
+            "text": "kiene Besonderheiten",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1511,
+            "text": "kiene Besonderheiten",
+            "formula": "",
+            "todo": false
+          }
+        ]
+      },
+      {
+        "id": 1348,
+        "name": "Vertrag: Forderungen",
+        "entries": [
+          {
+            "id": 1349,
+            "text": "{person:feld=ausrichtung;wenn1=Face;dann1=einen Heel-Turn;sonst=einen Face-Turn}",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1350,
+            "text": "{wahl:aus=ein Tables Match|ein Extreme Rules Match|ein Singles Match|ein Tag Team Match|ein Titel Match} zum Vertragsstart",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1351,
+            "text": "{wahl:aus=einen Sieg im ersten Match|eine Niederlage im ersten Match}",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1352,
+            "text": "ein Match gegen {wrestler:show=Vertrag;geschlecht=wie Person}",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1353,
+            "text": "ein Match gegen {wrestler:show=Vertrag;geschlecht=wie Person}",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1354,
+            "text": "die Übernahme der Miete für ein Loft {wahl:aus=in der Altstadt|in der Südstadt|in Ehrenfeld|in Deutz} (Wert: {zahl:von=2500;bis=4500} Euro monatlich)",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1355,
+            "text": "ein Zusatzhonorar von {zahl:von=200;bis=500} Euro pro Sieg via Pinfall und {zahl:von=600;bis=900} Euro pro Sieg via Submission",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1356,
+            "text": "einen Zuschuss zu einem {wahl:aus=Ford Mustang|Porsche Cayenne|Tesla Model S} inklusive Tankkarte (Wert: {zahl:von=800;bis=1200} Euro monatlich)",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1357,
+            "text": "ein Match in einer Outdoor Arena",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1358,
+            "text": "eine neue Allianz mit einem dominanten Tag Team",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1359,
+            "text": "die Lizenzierung eines Songs von {wahl:aus=Kraftschlag|Eminem|Cologne Tape|Taylor Swift|Rammstein|Die Toten Hosen|Beatsteaks|Modeselektor|Fritz Kalkbrenner|Deichkind|KIZ|Kraftwerk|Scooter|Peter Fox|Nina Chuba|Apache 207|Billie Eilish|Ed Sheeran|Metallica|AC/DC|Daft Punk|The Chemical Brothers|Justice|LCD Soundsystem|Gorillaz|The Prodigy|Aphex Twin|Gracie Abrams|Burial|Four Tet|Bonobo} als neue Einzugsmusik",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1360,
+            "text": "einen Sieg gegen {wrestler:show=Vertrag;geschlecht=wie Person}",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1361,
+            "text": "einen Sieg gegen {wrestler:show=Vertrag;geschlecht=wie Person}",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1362,
+            "text": "einen Tagteam-Run",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1363,
+            "text": "eine Ruhezeit von einer Show nach jedem Auftritt",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1364,
+            "text": "eine Siegesserie von mindestens {zahl:von=3;bis=10} Matches",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1365,
+            "text": "einen Manager, der bei {zahl:von=50;bis=100}% aller Matches am Ring steht",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1366,
+            "text": "ein {wahl:aus=60 Minute Iron Man Match|Titel vs. Karriere Extreme Rules Match|30 Minute Iron Man No Disqualification Singles Match zum Vertragsstart|Singles Match|Tag Team Elimination Match} gegen {wrestler:show=Vertrag;geschlecht=wie Person}",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1367,
+            "text": "ein {wahl:aus=Last Man Standing Match|Falls Count Anywhere Match|Extreme Rules Match zum Vertragsstart|Singles Match|Ladder Match} gegen {wrestler:show=Vertrag;geschlecht=wie Person}",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1368,
+            "text": "ein {wahl:aus=Last Man Standing Match|Falls Count Anywhere Match|Extreme Rules Match zum Vertragsstart|Singles Match|Ladder Match} gegen {wrestler:show=Vertrag;geschlecht=wie Person}",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1369,
+            "text": "Ein eigenen Interview-Segments namens „The {person} Show“ bei jedem PPV",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1370,
+            "text": "ein Match gegen einen amtierenden Champion",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1371,
+            "text": "die Erlabuniss bei anderen Wrestlingligen aufzutreten",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1372,
+            "text": "ein spezielles Match (z. B. Ladder Match, Cage Match) bei {liga:feld=naechsterPPV}",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1373,
+            "text": "ein Last Man Standing Match bei dem nächsten PPV gegen {wrestler:promotion=KHW;geschlecht=wie Person}",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1374,
+            "text": "einen Auftritt bei {liga:feld=naechsterPPV}",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1375,
+            "text": "einen Gewinn bei einem PPV",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1376,
+            "text": "2 Matches in unter {zahl:von=3;bis=8} Minuten gewinnen",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1377,
+            "text": "Kostenlose Werbung des eigenen {wahl:aus=Energy Drinks|Craft Beers|Whiskeys|Detox-Tees} mit großem Logo auf der Ringmatte",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1378,
+            "text": "ein Match in einem Turnier",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1379,
+            "text": "{zahl:von=2000;bis=5000} Euro für die Ausbildung eines {wahl:aus=Alpakas das|Schimpansen der|Pinguins der|Mini-Ponys das}, {person} zum Ring begleiten muss.",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1380,
+            "text": "das erlernen von 3 neuen Moves",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1381,
+            "text": "{zahl:von=1;bis=6} PPV Teilnahmen",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1382,
+            "text": "eine Wöchentliche Ganzkörper-Behandlung mit {wahl:aus=echtem Blattgold|vulkanischem Heilschlamm|Eselsmilch} zur Erhaltung des 'Main Event Glows' (Wert: {zahl:von=800;bis=2200} Euro)",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1383,
+            "text": "einen persönlichen Assistenten, der {person} während der Matches das Wasser reicht und bei Bedarf {person:feld=ausrichtung;wenn1=Heel;dann1=die Fans zum Jubeln animiert;sonst=die Fans beleidigt} (Gehalt: 3000 Euro pro Monat)",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1384,
+            "text": "eine eigenständige Wrestling-Show zu organisieren (Sonderausgabe oder PPV)",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1385,
+            "text": "innerhalb des Vertragzeitraum mindestens zwei Titelchancen",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1386,
+            "text": "innerhalb von drei Monaten eine neue Fehde mit {person:feld=geschlecht;wenn1=m;dann1=einem hochrangigen Wrestler;sonst=einer hochrangigen Wrestlerin} zu starten",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1387,
+            "text": "einen Auftritt bei {liga:feld=naechsterPPV} und {liga:feld=uebernaechsterPPV}",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1388,
+            "text": "eine spektakuläre Gesichtsbemalung als Charakterentwicklung",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1389,
+            "text": "bis Ende nächsten Monats {wahl:aus=das Aushängeschild der Liga|in einem neuen Tag Team|Anführer eines neuen Stables} zu sein",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1390,
+            "text": "{person:feld=ausrichtung;wenn1=Face;dann1=einen Heel-Turn durch einen unfairen Titelgewinn;sonst=einen Face-Turn durch ein einmaliges Turnier}",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1391,
+            "text": "{wahl:aus=Vergünstigungen auf Wohnungsmiete in Köln|die Überhame der Miete einer Wohnung im Liga-Umfeld|Erstattungen von Weiterbildungskursen|die Kostenübernahme für eine persönliche Trainer/Betreuer|einen Finanziellen Bonus für besondere Erfolge} in einem Wert von {zahl:von=1;bis=10;mal=250} pro Monat",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1392,
+            "text": "ein {wahl:aus=Iron Man Match|Extreme Rules Match|Tables Match|Singles Match|Tag Team Match} gegen {wrestler:show=Vertrag;geschlecht=wie Person}",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1393,
+            "text": "eine persönliche Rivalität gegen {wrestler:show=Vertrag;geschlecht=wie Person}, weil {wahl:aus=er/sie mein geheimes Familienrezept für Kartoffelsalat gestohlen hat|er/sie behauptet, mein Finisher sähe aus wie ein missglückter Purzelbaum|er/sie mein Lieblings-T-Shirt im Backstage-Bereich als Putzlappen benutzt hat|ich ihm/ihr noch 15 Euro für eine Pizza aus dem Jahr 2019 schuldest|er/sie mein Haarspray gegen Sekundenkleber ausgetauscht hat}",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1394,
+            "text": "einen neuen Einzug",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1395,
+            "text": "einen Sieg in einem spektakulären {wahl:aus=No Holds Barred Match|Last Man Standing Match|Hell in a Cell Match|TLC (Tables, Ladders & Chairs) Match|Singles Match} gegen {wrestler:show=Vertrag;geschlecht=wie Person}",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1396,
+            "text": "einen Titelgewinn",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1397,
+            "text": "{wrestler:show=Lucky7;ausrichtung=Heel} als Manager",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1398,
+            "text": "eine persönliche Feindschaft mit {wrestler:show=Vertrag;geschlecht=wie Person}, da er/sie {wahl:aus=mein geheimes Notizbuch mit Finisher-Ideen gestohlen hat|behauptet, ich hätte mein letztes Match nur durch Bestechung gewonnen|meinen Parkplatz mit seinem/ihrem Auto blockiert hat|vor der versammelten Kabine mein peinlichstes Highschool-Foto gezeigt hat|meinen teuren Designer-Umhang 'aus Versehen' in die Kochwäsche gesteckt hat}",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1399,
+            "text": "einen Ideen Boni zwischen 500 und 5000 Euro für die Entwicklung neuer Storyline-Konzepte",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1400,
+            "text": "ein Zusatzhonorar von {vertrag:feld=alternative;durch=300;runden=10} Euro pro Match",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1401,
+            "text": "ein Zusatzhonorar von {vertrag:feld=alternative;durch=180;runden=10} Euro pro Sieg in einem Einzelmatch",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1402,
+            "text": "eine intensive Best-of-5 Serie gegen {wrestler:show=Vertrag;status=wie Person}, um zu klären, wer in der Kabine von {vertrag:feld=show} die Oberhand hat.",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1403,
+            "text": "eine Extra Zahlung von {vertrag:feld=alternative;durch=3;runden=100}€ pro gewonnenem Match bei einem PPV",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1404,
+            "text": "einen Sieg in einem spektakulären {wahl:aus=No Holds Barred Match|Last Man Standing Match|Hell in a Cell Match|TLC (Tables, Ladders & Chairs) Match|Singles Match} gegen {wrestler:show=Vertrag;geschlecht=wie Person}",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1405,
+            "text": "ein Match gegen {wrestler:show=Vertrag;geschlecht=wie Person}",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1406,
+            "text": "ein Match gegen {wrestler:show=Vertrag;geschlecht=wie Person}",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1407,
+            "text": "einen Titelgewinn",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1408,
+            "text": "ein neues Gimmick",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1409,
+            "text": "die Teilnahme an internationalen Wrestling-Events der KHW",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1410,
+            "text": "{zahl:von=1;bis=6} PPV Teilnahmen",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1411,
+            "text": "{zahl:von=2;bis=4} Main Event Matches bei kommenden PPVs",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1412,
+            "text": "volle kreative Kontrolle über den Charakter",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1413,
+            "text": "{wahl:aus=Vergünstigungen auf Wohnungsmiete in Köln|die Überhame der Miete einer Wohnung im Liga-Umfeld|Erstattungen von Weiterbildungskursen|die Kostenübernahme für eine persönliche Trainer/Betreuer|einen Finanziellen Bonus für besondere Erfolge} in einem Wert von {zahl:von=1;bis=10;mal=250} pro Monat",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1414,
+            "text": "Werbeverträge mit {wahl:aus=New Balance|Under Armour|Asics|Puma|Nike} und das Nutzen derer Produkte im Ring",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1415,
+            "text": "finanzielle Unterstützung für Trainingscamps, Physiotherapie in einem Wert von {zahl:von=1;bis=10;mal=150} Euro",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1416,
+            "text": "die garantierte Teilnahme an großen KHW Wrestling-Touren",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1417,
+            "text": "Bonuszahlungen in einem Wert von {zahl:von=1;bis=10;mal=150} Euro pro Match für 5 Sterne Matches",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1418,
+            "text": "Bonuszahlungen in einem Wert von {zahl:von=1;bis=10;mal=50} Euro pro Match für 5 Sterne Matches",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1419,
+            "text": "ein Mitspracherecht bei der Auswahl von Gegnern",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1420,
+            "text": "Spezielle Eintrittsboni für ausverkaufte Shows zwischen 500 und 5000 Euro",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1421,
+            "text": "eine Erlaubniss für einen Auftritt bei einer großen Wrestling-Convention oder Fan-Expo",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1422,
+            "text": "eine eigenständige Wrestling-Show zu organisieren (Sonderausgabe oder PPV)",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1423,
+            "text": "eine Zusage für einen weiteren Vertrag nach dem aktuellen Vertragzeitraum",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1424,
+            "text": "einen Sieg gegen {wrestler:show=Vertrag;geschlecht=wie Person}",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1425,
+            "text": "einen Sieg gegen {wrestler:show=Vertrag;geschlecht=wie Person}",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1426,
+            "text": "ein Match gegen {wrestler:show=Vertrag;geschlecht=wie Person} mit {wrestler:show=Vertrag} als Special Guest Referee.",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1427,
+            "text": "ein Match gegen {wrestler:show=Vertrag;geschlecht=wie Person} mit {wrestler:show=Vertrag} als Special Guest Referee.",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1428,
+            "text": "eine Niederlage gegen {wrestler:show=Vertrag;geschlecht=wie Person}",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1429,
+            "text": "die exklusive Partnerschaft mit {wahl:aus=Bulk Powders|GNC|MuscleTech|Optimum Nutrition|Lululemon} inklusive dem Firmen-Logo auf einem Shirt beim Einzug",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1430,
+            "text": "ein Gimmickwechsel inklusive einem neuen Namen",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1431,
+            "text": "die exklusiven Recht auf die Verwendung des Wrestling-Charakters in allen Medien",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1432,
+            "text": "eine gnadenlose Storyline-Fehde gegen das Stable {stable:show=Vertrag}",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1433,
+            "text": "einen Verkaufsstart von gebrandeten {wahl:aus=Eiscreme-Riegeln|Hot-Sauce-Flaschen|BBQ-Saucen|Frühstücksflocken} an den Imbissständen der Arena.",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1434,
+            "text": "{wahl:aus=Vergünstigungen auf Wohnungsmiete in Köln|die Überhame der Miete einer Wohnung im Liga-Umfeld|Erstattungen von Weiterbildungskursen|die Kostenübernahme für eine persönliche Trainer/Betreuer|einen Finanziellen Bonus für besondere Erfolge} in einem Wert von {zahl:von=1;bis=10;mal=250} Euro pro Monat",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1435,
+            "text": "{wahl:aus=Vergünstigungen auf Wohnungsmiete in Köln|die Überhame der Miete einer Wohnung im Liga-Umfeld|Erstattungen von Weiterbildungskursen|die Kostenübernahme für eine persönliche Trainer/Betreuer|einen Finanziellen Bonus für besondere Erfolge} in einem Wert von {zahl:von=1;bis=10;mal=250} Euro pro Monat",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1436,
+            "text": "bis Ende nächsten Monats {wahl:aus=das Aushängeschild der Liga|in einem neuen Tag Team|Anführer eines neuen Stables} zu sein",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1437,
+            "text": "ein spektakuläres Ambulance Match gegen {wrestler:show=Vertrag;geschlecht=wie Person}, präsentiert von '{wahl:aus=Omas Bio-Abführtee|Bestattungshaus 'Fröhliches Ende'|RedBull-Energy: Geschmackssorte Ringstaub|Glitzer-Glatzen-Politur}'",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1438,
+            "text": "{nurwenn:champion=ja}Garantierter Main Event Slot als {person:feld=titel}.",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1439,
+            "text": "{nurwenn:champion=ja}Ein Match um die Ehre der {person:feld=titel}.",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1440,
+            "text": "{nurwenn:champion=ja}Sicherstellung der ökologischen Standards als {person:feld=titel}.",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1441,
+            "text": "{nurwenn:champion=ja}Prämien-Anpassung aufgrund des Status als {person:feld=titel}.",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1442,
+            "text": "{nurwenn:champion=nein}Ein Match gegen {titel:name=Vertrags-Show;feld=traeger} um den {titel:name=Vertrags-Show;feld=name} Titel.",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1443,
+            "text": "{nurwenn:champion=nein}Garantierte Chance auf ein Match um den {titel:name=Vertrags-Show;feld=name} Titel.",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1444,
+            "text": "{nurwenn:champion=nein}Ein #1 Contender Match für die {titel:name=Vertrags-Show;feld=name}.",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1445,
+            "text": "{nurwenn:champion=nein}Teilnahme an der Battle Royal um den {titel:name=Vertrags-Show;feld=name} Status.",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1446,
+            "text": "{nurwenn:champion=nein}Sieg-Klausel: Bei Erfolg sofortiges Match um den {titel:name=Vertrags-Show;feld=name} Titel.",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1447,
+            "text": "{nurwenn:champion=nein}Ein Triple Threat Match um die {titel:name=Vertrags-Show;feld=name} Krone.",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1448,
+            "text": "{wahl:aus=Vergünstigungen auf Wohnungsmiete in Köln|die Überhame der Miete einer Wohnung im Liga-Umfeld|Erstattungen von Weiterbildungskursen|die Kostenübernahme für eine persönliche Trainer/Betreuer|einen Finanziellen Bonus für besondere Erfolge} in einem Wert von {zahl:von=1;bis=10;mal=250} Euro pro Monat",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1449,
+            "text": "eine Teilnahme an einem exklusiven Turnier mit hochkarätigen Gegnern",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1450,
+            "text": "eine Teilnahme am jährlichen Würfel-Wahnsin Rumble mit einem bevorzugten Startplatz",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1451,
+            "text": "ein Match bei einem internationalen WrestleMania-ähnlichen Event",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1452,
+            "text": "ein Submission Match gegen {wrestler:show=Vertrag;geschlecht=wie Person} – Klopfen ist die einzige Option.",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1453,
+            "text": "ein spezielles Gastauftritt-Match bei einem renommierten Turnier wie z.B. dem WWE dem King of the Ring",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1454,
+            "text": "eine Teilnahme an einem Tag Team Turnier",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1455,
+            "text": "ein Iron Man Match bei einem PPV",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1456,
+            "text": "ein Championship Match bei einem großen Event",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1457,
+            "text": "einen exklusive Promo-Slot bei einem der größten Events des Jahres",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1458,
+            "text": "eine spektakuläre Promo nach einem Main Events gegen {wrestler:promotion=KHW;geschlecht=wie Person}",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1459,
+            "text": "{wahl:aus=Vergünstigungen auf Wohnungsmiete in Köln|die Überhame der Miete einer Wohnung im Liga-Umfeld|Erstattungen von Weiterbildungskursen|die Kostenübernahme für eine persönliche Trainer/Betreuer|einen Finanziellen Bonus für besondere Erfolge} in einem Wert von {zahl:von=1;bis=10;mal=250} Euro pro Monat",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1460,
+            "text": "eine Teilnahme an einem No Disqualification Match",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1461,
+            "text": "ein Hell in a Cell Match gegen einen Erzrivalen",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1462,
+            "text": "ein Loser Leaves Town Match zum Vertragsende",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1463,
+            "text": "eine Teilnahme an einem Steel Cage Match bei einem großen PPV",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1464,
+            "text": "ein Falls Count Anywhere Match",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1465,
+            "text": "ein Tables, Ladders, and Chairs (TLC) Match",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1466,
+            "text": "ein Match mit einer speziellen Stipulation (First Blood Match)",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1467,
+            "text": "die Möglichkeit, einen neuen Wrestler als Schützling auszuwählen und zu fördern",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1468,
+            "text": "eine Teilnahme an einem Tag Team Match mit {wrestler:promotion=KHW;geschlecht=wie Person}",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1469,
+            "text": "die Teilnahme an einer neuen Matchart, die so noch nie bei KHW stattgefunden hat.",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1470,
+            "text": "Regelmäßige Trainingssessions in einem Wert von {zahl:von=1;bis=10;mal=20} Euro pro Monat",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1471,
+            "text": "Ein Mentoring-Segment in der wöchentlichen Show",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1472,
+            "text": "die Lizenzierung eines Songs von {wahl:aus=Kraftschlag|Eminem|Cologne Tape|Taylor Swift|Rammstein|Die Toten Hosen|Beatsteaks|Modeselektor|Fritz Kalkbrenner|Deichkind|KIZ|Kraftwerk|Scooter|Peter Fox|Nina Chuba|Apache 207|Billie Eilish|Ed Sheeran|Metallica|AC/DC|Daft Punk|The Chemical Brothers|Justice|LCD Soundsystem|Gorillaz|The Prodigy|Aphex Twin|Burial|Four Tet|Bonobo} als neue Musik nach einem Sieg",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1473,
+            "text": "die Teilnahme an einem Mentor-vs-Schützling-Match, um den Fortschritt des Schützlings zu zeigen",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1474,
+            "text": "{wahl:aus=die Bereitstellung eines persönlichen Trainers zur Verbesserung von Fitness und Technik|den Zugang zu erweiterten Rehabilitations- und medizinischen Dienstleistungen|die Unterstützung bei der Entwicklung eines neuen Finishing Moves|die Bereitstellung eines persönlichen Marketing- und PR-Beraters zur Steigerung der Bekanntheit|den Zugang zu einem spezialisierten Ernährungsberater|die Unterstützung bei der Entwicklung und Umsetzung eines neuen Gimmicks|eine Finanzierung eines persönlichen Ringkostüms von einem Top-Designer|die Bereitstellung eines persönlichen Social Media Managers zur Erhöhung der Online-Präsenz|die Finanzierung von Schauspiel- oder Stimmtraining zur Verbesserung von Promos und Segmenten|einen Zugang zu erweiterten Reise- und Unterkunftsoptionen während Touren und Shows} in einem Wert von {zahl:von=1;bis=10;mal=25} Euro pro Monat",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1475,
+            "text": "{wahl:aus=die Bereitstellung eines persönlichen Trainers zur Verbesserung von Fitness und Technik|den Zugang zu erweiterten Rehabilitations- und medizinischen Dienstleistungen|die Unterstützung bei der Entwicklung eines neuen Finishing Moves|die Bereitstellung eines persönlichen Marketing- und PR-Beraters zur Steigerung der Bekanntheit|den Zugang zu einem spezialisierten Ernährungsberater|die Unterstützung bei der Entwicklung und Umsetzung eines neuen Gimmicks|eine Finanzierung eines persönlichen Ringkostüms von einem Top-Designer|die Bereitstellung eines persönlichen Social Media Managers zur Erhöhung der Online-Präsenz|die Finanzierung von Schauspiel- oder Stimmtraining zur Verbesserung von Promos und Segmenten|einen Zugang zu erweiterten Reise- und Unterkunftsoptionen während Touren und Shows} in einem Wert von {zahl:von=1;bis=10;mal=25} Euro pro Monat",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1476,
+            "text": "{wahl:aus=die Bereitstellung eines persönlichen Trainers zur Verbesserung von Fitness und Technik|den Zugang zu erweiterten Rehabilitations- und medizinischen Dienstleistungen|die Unterstützung bei der Entwicklung eines neuen Finishing Moves|die Bereitstellung eines persönlichen Marketing- und PR-Beraters zur Steigerung der Bekanntheit|den Zugang zu einem spezialisierten Ernährungsberater|die Unterstützung bei der Entwicklung und Umsetzung eines neuen Gimmicks|eine Finanzierung eines persönlichen Ringkostüms von einem Top-Designer|die Bereitstellung eines persönlichen Social Media Managers zur Erhöhung der Online-Präsenz|die Finanzierung von Schauspiel- oder Stimmtraining zur Verbesserung von Promos und Segmenten|einen Zugang zu erweiterten Reise- und Unterkunftsoptionen während Touren und Shows} in einem Wert von {zahl:von=1;bis=10;mal=25} Euro pro Monat",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1477,
+            "text": "einen neuen Signatur-Move",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1478,
+            "text": "ein Match in einem Käfig",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1479,
+            "text": "{zahl:von=12;bis=28} Sterne",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1480,
+            "text": "{zahl:von=12;bis=28} Skill Punkte",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1481,
+            "text": "{zahl:von=12;bis=28} Sterne",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1482,
+            "text": "{zahl:von=12;bis=28} Skill Punkte",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1483,
+            "text": "Keine Matches im Monat {liga:feld=monat;plus=1} zu haben.",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1484,
+            "text": "Keine Matches im Monat {liga:feld=monat;plus=2} zu haben.",
+            "formula": "",
+            "todo": false
+          }
+        ]
+      },
+      {
+        "id": 1522,
+        "name": "Verletzungen",
+        "entries": [
+          {
+            "id": 1523,
+            "text": "Bänderriss im Knie",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1524,
+            "text": "Gehirnerschütterung",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1525,
+            "text": "ausgekugelte Schulter",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1526,
+            "text": "geprellte Rippen",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1527,
+            "text": "Bandscheibenvorfall",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1528,
+            "text": "gebrochene Nase",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1529,
+            "text": "Muskelfaserriss im Oberschenkel",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1530,
+            "text": "verstauchter Knöchel",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1531,
+            "text": "Platzwunde über dem Auge",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1532,
+            "text": "Nackenverletzung",
+            "formula": "",
+            "todo": false
+          }
+        ]
+      },
+      {
+        "id": 1533,
+        "name": "Mitarbeiter: Vorteile",
+        "entries": [
+          {
+            "id": 1534,
+            "text": "Rabatt auf Hallenmieten um 25%",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1535,
+            "text": "Rabatt auf HK Casino um 25%",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1536,
+            "text": "Rabatt auf Klassische Sportarena um 25%",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1537,
+            "text": "Rabatt auf Großes OutdoorStadion 2 um 25%",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1538,
+            "text": "Rabatt auf Großes OutdoorStadion 1 um 25%",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1539,
+            "text": "Rabatt auf Freiluft Bühne um 25%",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1540,
+            "text": "Rabatt auf IndoorStadion um 25%",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1541,
+            "text": "Arztkosten um 25% reduziert",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1542,
+            "text": "Trainingskosten für Moves um 25% reduziert",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1543,
+            "text": "500 Follower",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1544,
+            "text": "50% Rabatt auf Sponsoring",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1545,
+            "text": "50% Rabatt auf Werbung",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1546,
+            "text": "25% Rabatt auf Hallenumbau",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1547,
+            "text": "1 zusätzlicher Skillpunkt",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1548,
+            "text": "Verwendung von Tischen möglich",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1549,
+            "text": "Verwendung von Stühlen möglich",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1550,
+            "text": "Arztkosten um 50% reduziert",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1551,
+            "text": "Arztkosten um 75% reduziert",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1552,
+            "text": "Arztkosten um 25% reduziert",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1553,
+            "text": "Rabatt auf Hallenmieten um 25%",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1554,
+            "text": "Rabatt auf HK Casino um 25%",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1555,
+            "text": "Rabatt auf HK Casino um 25%",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1556,
+            "text": "Rabatt auf Klassische Sportarena um 25%",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1557,
+            "text": "Trainingskosten für Moves um 25% reduziert",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1558,
+            "text": "Trainingskosten für Moves um 50% reduziert",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1559,
+            "text": "Kostenloser 3 Monats Vertrag für einen Newcomer",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1560,
+            "text": "Kostenloser 4 Monats Vertrag für einen Newcomer",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1561,
+            "text": "Kostenloser 5 Monats Vertrag für einen Newcomer",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1562,
+            "text": "Eine Verletzung nach 2 Monaten heilen ohne zu zahlen",
+            "formula": "",
+            "todo": false
+          }
+        ]
+      },
+      {
+        "id": 1563,
+        "name": "Mitarbeiter: Vorteile (selten)",
+        "entries": [
+          {
+            "id": 1564,
+            "text": "Rabatt auf Hallenmieten um 50%",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1565,
+            "text": "Rabatt auf Hallenmieten um 75%",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1566,
+            "text": "Rabatt auf HK Casino um 50%",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1567,
+            "text": "Rabatt auf HK Casino um 75%",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1568,
+            "text": "Rabatt auf Klassische Sportarena um 50%",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1569,
+            "text": "Rabatt auf Klassische Sportarena um 75%",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1570,
+            "text": "Rabatt auf Großes OutdoorStadion 2 um 50%",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1571,
+            "text": "Rabatt auf Großes OutdoorStadion 2 um 75%",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1572,
+            "text": "Rabatt auf Großes OutdoorStadion 1 um 50%",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1573,
+            "text": "Rabatt auf Großes OutdoorStadion 1 um 75%",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1574,
+            "text": "Rabatt auf Freiluft Bühne um 50%",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1575,
+            "text": "Rabatt auf Freiluft Bühne um 75%",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1576,
+            "text": "Rabatt auf IndoorStadion um 50%",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1577,
+            "text": "Rabatt auf IndoorStadion um 75%",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1578,
+            "text": "Arztkosten um 50% reduziert",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1579,
+            "text": "Arztkosten um 75% reduziert",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1580,
+            "text": "Trainingskosten für Moves um 50% reduziert",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1581,
+            "text": "Trainingskosten für Moves um 75% reduziert",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1582,
+            "text": "1000 Follower",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1583,
+            "text": "Kostenloses Sponsoring",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1584,
+            "text": "Kostenlose Werbung",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1585,
+            "text": "Kostenloser Hallenumbau",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1586,
+            "text": "50% Rabatt auf Hallenumbau",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1587,
+            "text": "Kostenlose Anpassung eines Wrestler ELO-Werts",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1588,
+            "text": "2 zusätzliche Skillpunkte",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1589,
+            "text": "5 zusätzliche Skillpunkte",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1590,
+            "text": "Zugriff auf den Schwarzmarkt freigeschaltet",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1591,
+            "text": "Kostenloser 3 Monats Vertrag für einen Main Event Wrestler",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1592,
+            "text": "Kostenloser 3 Monats Vertrag für einen Midcard Wrestler",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1593,
+            "text": "Kostenloser 3 Monats Vertrag für einen Uppercard Wrestler",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1594,
+            "text": "Eine Verletzung nach einem Monat heilen ohne zu zahlen",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1595,
+            "text": "Arztkosten um 50% reduziert",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1596,
+            "text": "Arztkosten um 75% reduziert",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1597,
+            "text": "Kostenlose Trainingskosten für Moves",
+            "formula": "",
+            "todo": false
+          }
+        ]
+      },
+      {
+        "id": 1598,
+        "name": "Mitarbeiter: Vornamen",
+        "entries": [
+          {
+            "id": 1599,
+            "text": "Anna",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1600,
+            "text": "Max",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1601,
+            "text": "Lisa",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1602,
+            "text": "Jonas",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1603,
+            "text": "Emma",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1604,
+            "text": "Leon",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1605,
+            "text": "Mia",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1606,
+            "text": "Noah",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1607,
+            "text": "Lara",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1608,
+            "text": "Paul",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1609,
+            "text": "Tom",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1610,
+            "text": "Lena",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1611,
+            "text": "Sofia",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1612,
+            "text": "Ali",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1613,
+            "text": "Fatima",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1614,
+            "text": "Yusuf",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1615,
+            "text": "Lukiya",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1616,
+            "text": "Carlos",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1617,
+            "text": "Amina",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1618,
+            "text": "Kenji",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1619,
+            "text": "Nina",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1620,
+            "text": "Mateo",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1621,
+            "text": "Chiara",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1622,
+            "text": "Omar",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1623,
+            "text": "Leila",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1624,
+            "text": "Zara",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1625,
+            "text": "Jin",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1626,
+            "text": "Elif",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1627,
+            "text": "Tariq",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1628,
+            "text": "Ivana",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1629,
+            "text": "Lukas",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1630,
+            "text": "Sarah",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1631,
+            "text": "Felix",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1632,
+            "text": "Julia",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1633,
+            "text": "Moritz",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1634,
+            "text": "Hannah",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1635,
+            "text": "David",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1636,
+            "text": "Marie",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1637,
+            "text": "Tim",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1638,
+            "text": "Clara",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1639,
+            "text": "Jakob",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1640,
+            "text": "Elena",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1641,
+            "text": "Simon",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1642,
+            "text": "Paula",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1643,
+            "text": "Ben",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1644,
+            "text": "Laura",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1645,
+            "text": "Tobias",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1646,
+            "text": "Melanie",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1647,
+            "text": "Julian",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1648,
+            "text": "Sophie",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1649,
+            "text": "Jan",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1650,
+            "text": "Katharina",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1651,
+            "text": "Florian",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1652,
+            "text": "Vanessa",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1653,
+            "text": "Christian",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1654,
+            "text": "Nadine",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1655,
+            "text": "Sebastian",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1656,
+            "text": "Annika",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1657,
+            "text": "Marc",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1658,
+            "text": "Tanja",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1659,
+            "text": "Erik",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1660,
+            "text": "Linda",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1661,
+            "text": "Nico",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1662,
+            "text": "Saskia",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1663,
+            "text": "Robin",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1664,
+            "text": "Mohammed",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1665,
+            "text": "Layla",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1666,
+            "text": "Hassan",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1667,
+            "text": "Zaynab",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1668,
+            "text": "Ibrahim",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1669,
+            "text": "Samira",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1670,
+            "text": "Ahmed",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1671,
+            "text": "Mariam",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1672,
+            "text": "Karim",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1673,
+            "text": "Amira",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1674,
+            "text": "Mustafa",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1675,
+            "text": "Yasmin",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1676,
+            "text": "Hamza",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1677,
+            "text": "Hana",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1678,
+            "text": "Said",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1679,
+            "text": "Farah",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1680,
+            "text": "Bilal",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1681,
+            "text": "Inaya",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1682,
+            "text": "Malik",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1683,
+            "text": "Rania",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1684,
+            "text": "Idris",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1685,
+            "text": "Meryem",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1686,
+            "text": "Selim",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1687,
+            "text": "Dilara",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1688,
+            "text": "Emir",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1689,
+            "text": "Azra",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1690,
+            "text": "Can",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1691,
+            "text": "Zehra",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1692,
+            "text": "Osman",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1693,
+            "text": "Esra",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1694,
+            "text": "Kerem",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1695,
+            "text": "Leyla",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1696,
+            "text": "Hakan",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1697,
+            "text": "Ayse",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1698,
+            "text": "Enes",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1699,
+            "text": "Marco",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1700,
+            "text": "Lucia",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1701,
+            "text": "Diego",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1702,
+            "text": "Elena",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1703,
+            "text": "Antonio",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1704,
+            "text": "Maria",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1705,
+            "text": "Fabio",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1706,
+            "text": "Valentina",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1707,
+            "text": "Ivan",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1708,
+            "text": "Mila",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1709,
+            "text": "Dragan",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1710,
+            "text": "Jelena",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1711,
+            "text": "Roberto",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1712,
+            "text": "Carmen",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1713,
+            "text": "Pablo",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1714,
+            "text": "Isabel",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1715,
+            "text": "Jorge",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1716,
+            "text": "Silvia",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1717,
+            "text": "Milan",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1718,
+            "text": "Svetlana",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1719,
+            "text": "Viktor",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1720,
+            "text": "Adriana",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1721,
+            "text": "Pedro",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1722,
+            "text": "Rosa",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1723,
+            "text": "Luca",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1724,
+            "text": "Hiroshi",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1725,
+            "text": "Yuki",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1726,
+            "text": "Wei",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1727,
+            "text": "Mei",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1728,
+            "text": "Jun",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1729,
+            "text": "Soo-Min",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1730,
+            "text": "Rohan",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1731,
+            "text": "Priya",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1732,
+            "text": "Akira",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1733,
+            "text": "Sakura",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1734,
+            "text": "Chen",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1735,
+            "text": "Ling",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1736,
+            "text": "Haruto",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1737,
+            "text": "Aoi",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1738,
+            "text": "Ravi",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1739,
+            "text": "Anaya",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1740,
+            "text": "Kwame",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1741,
+            "text": "Zola",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1742,
+            "text": "Jabari",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1743,
+            "text": "Thabo",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1744,
+            "text": "Malia",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1745,
+            "text": "Sora",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1746,
+            "text": "Kenza",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1747,
+            "text": "Devi",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1748,
+            "text": "Aris",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1749,
+            "text": "Jack",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1750,
+            "text": "Ruby",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1751,
+            "text": "Mike",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1752,
+            "text": "Roxy",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1753,
+            "text": "Dean",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1754,
+            "text": "Jade",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1755,
+            "text": "Hunter",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1756,
+            "text": "Skye",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1757,
+            "text": "Spike",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1758,
+            "text": "Raven",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1759,
+            "text": "Maverick",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1760,
+            "text": "Sierra",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1761,
+            "text": "Jax",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1762,
+            "text": "Lexi",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1763,
+            "text": "Blade",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1764,
+            "text": "Brock",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1765,
+            "text": "Misty",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1766,
+            "text": "Kane",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1767,
+            "text": "Ember",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1768,
+            "text": "Dash",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1769,
+            "text": "Stefan",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1770,
+            "text": "Sandra",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1771,
+            "text": "Marcel",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1772,
+            "text": "Bianca",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1773,
+            "text": "Patrick",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1774,
+            "text": "Denise",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1775,
+            "text": "Kevin",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1776,
+            "text": "Silke",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1777,
+            "text": "Andre",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1778,
+            "text": "Carina",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1779,
+            "text": "Pascal",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1780,
+            "text": "Daniela",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1781,
+            "text": "Sven",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1782,
+            "text": "Anke",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1783,
+            "text": "Holger",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1784,
+            "text": "Birgit",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1785,
+            "text": "Jörg",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1786,
+            "text": "Heike",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1787,
+            "text": "Uwe",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1788,
+            "text": "Petra",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1789,
+            "text": "Khalid",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1790,
+            "text": "Sumaya",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1791,
+            "text": "Nasir",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1792,
+            "text": "Salma",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1793,
+            "text": "Yasin",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1794,
+            "text": "Naima",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1795,
+            "text": "Farid",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1796,
+            "text": "Jamila",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1797,
+            "text": "Walid",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1798,
+            "text": "Dunya",
+            "formula": "",
+            "todo": false
+          }
+        ]
+      },
+      {
+        "id": 1799,
+        "name": "Mitarbeiter: Nachnamen",
+        "entries": [
+          {
+            "id": 1800,
+            "text": "Müller",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1801,
+            "text": "Schmidt",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1802,
+            "text": "Schneider",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1803,
+            "text": "Fischer",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1804,
+            "text": "Weber",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1805,
+            "text": "Meyer",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1806,
+            "text": "Wagner",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1807,
+            "text": "Becker",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1808,
+            "text": "Hoffmann",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1809,
+            "text": "Bauer",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1810,
+            "text": "Richter",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1811,
+            "text": "Wolf",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1812,
+            "text": "Steel",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1813,
+            "text": "Stone",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1814,
+            "text": "Blade",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1815,
+            "text": "Storm",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1816,
+            "text": "Irons",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1817,
+            "text": "Havoc",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1818,
+            "text": "Bane",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1819,
+            "text": "Gore",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1820,
+            "text": "Slaughter",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1821,
+            "text": "Payne",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1822,
+            "text": "Creed",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1823,
+            "text": "Sterling",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1824,
+            "text": "Frost",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1825,
+            "text": "Blaze",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1826,
+            "text": "Viper",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1827,
+            "text": "Wild",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1828,
+            "text": "Savage",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1829,
+            "text": "Black",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1830,
+            "text": "White",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1831,
+            "text": "Grey",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1832,
+            "text": "Knight",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1833,
+            "text": "Cross",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1834,
+            "text": "Thorne",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1835,
+            "text": "Bishop",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1836,
+            "text": "King",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1837,
+            "text": "Duke",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1838,
+            "text": "Ace",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1839,
+            "text": "Cash",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1840,
+            "text": "Banks",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1841,
+            "text": "Rich",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1842,
+            "text": "Power",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1843,
+            "text": "Strong",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1844,
+            "text": "Bold",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1845,
+            "text": "Hardy",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1846,
+            "text": "Sharp",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1847,
+            "text": "Quick",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1848,
+            "text": "Graves",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1849,
+            "text": "Bones",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1850,
+            "text": "Crow",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1851,
+            "text": "Fox",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1852,
+            "text": "Styles",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1853,
+            "text": "Rhodes",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1854,
+            "text": "Guerrero",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1855,
+            "text": "Flair",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1856,
+            "text": "Hart",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1857,
+            "text": "Michaels",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1858,
+            "text": "Rollins",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1859,
+            "text": "Reigns",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1860,
+            "text": "Omega",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1861,
+            "text": "Cage",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1862,
+            "text": "Castagnoli",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1863,
+            "text": "Dragunov",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1864,
+            "text": "Gunther",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1865,
+            "text": "Mansour",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1866,
+            "text": "Haddad",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1867,
+            "text": "Abbas",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1868,
+            "text": "Bakir",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1869,
+            "text": "Al-Farsi",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1870,
+            "text": "Qadir",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1871,
+            "text": "Saidi",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1872,
+            "text": "Ganim",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1873,
+            "text": "Hamad",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1874,
+            "text": "Khalil",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1875,
+            "text": "Rashid",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1876,
+            "text": "Jameel",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1877,
+            "text": "Sharif",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1878,
+            "text": "Zaid",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1879,
+            "text": "Nafisi",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1880,
+            "text": "Mustafa",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1881,
+            "text": "Kareem",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1882,
+            "text": "Aziz",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1883,
+            "text": "Hakim",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1884,
+            "text": "Saleh",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1885,
+            "text": "Fahad",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1886,
+            "text": "Nasr",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1887,
+            "text": "Tahan",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1888,
+            "text": "Barakat",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1889,
+            "text": "Khouri",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1890,
+            "text": "Malouf",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1891,
+            "text": "Sayegh",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1892,
+            "text": "Harbi",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1893,
+            "text": "Bishara",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1894,
+            "text": "Zogby",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1895,
+            "text": "Kattan",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1896,
+            "text": "Gaber",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1897,
+            "text": "Ammar",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1898,
+            "text": "Zadeh",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1899,
+            "text": "Rodriguez",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1900,
+            "text": "Garcia",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1901,
+            "text": "Martinez",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1902,
+            "text": "Rossi",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1903,
+            "text": "Conti",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1904,
+            "text": "Ferrari",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1905,
+            "text": "Silva",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1906,
+            "text": "Santos",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1907,
+            "text": "Costa",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1908,
+            "text": "Ramos",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1909,
+            "text": "Torres",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1910,
+            "text": "Vega",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1911,
+            "text": "Ortiz",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1912,
+            "text": "Mendez",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1913,
+            "text": "Romano",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1914,
+            "text": "Moretti",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1915,
+            "text": "Ricci",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1916,
+            "text": "Marino",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1917,
+            "text": "Greco",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1918,
+            "text": "Bruno",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1919,
+            "text": "Gallo",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1920,
+            "text": "De Luca",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1921,
+            "text": "Rizzo",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1922,
+            "text": "Lombardi",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1923,
+            "text": "Castillo",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1924,
+            "text": "Ortega",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1925,
+            "text": "Tanaka",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1926,
+            "text": "Nakamura",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1927,
+            "text": "Sato",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1928,
+            "text": "Suzuki",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1929,
+            "text": "Zhang",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1930,
+            "text": "Li",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1931,
+            "text": "Nguyen",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1932,
+            "text": "Kim",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1933,
+            "text": "Park",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1934,
+            "text": "Lee",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1935,
+            "text": "Chen",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1936,
+            "text": "Wang",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1937,
+            "text": "Gupta",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1938,
+            "text": "Singh",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1939,
+            "text": "Khan",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1940,
+            "text": "Okafor",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1941,
+            "text": "Mensah",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1942,
+            "text": "Diallo",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1943,
+            "text": "Mbeki",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1944,
+            "text": "Saito",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1945,
+            "text": "Ito",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1946,
+            "text": "Yamamoto",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1947,
+            "text": "Watanabe",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1948,
+            "text": "Kovacs",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1949,
+            "text": "Novak",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1950,
+            "text": "Petrov",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1951,
+            "text": "Ivanov",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1952,
+            "text": "Zajac",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1953,
+            "text": "Hansen",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1954,
+            "text": "Larsen",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1955,
+            "text": "Nilsson",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1956,
+            "text": "Eriksson",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1957,
+            "text": "Dubois",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1958,
+            "text": "Moreau",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1959,
+            "text": "Laurent",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1960,
+            "text": "Lefebvre",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1961,
+            "text": "Leroy",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1962,
+            "text": "Hammer",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1963,
+            "text": "Vane",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1964,
+            "text": "Nitro",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1965,
+            "text": "Rage",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1966,
+            "text": "Cannon",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1967,
+            "text": "Bullet",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1968,
+            "text": "Hunter",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1969,
+            "text": "Striker",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1970,
+            "text": "Gunn",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1971,
+            "text": "Valentine",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1972,
+            "text": "Lashley",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1973,
+            "text": "Lesnar",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1974,
+            "text": "Orton",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1975,
+            "text": "Cena",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1976,
+            "text": "Mystic",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1977,
+            "text": "Knight",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1978,
+            "text": "Raven",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1979,
+            "text": "Corbin",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1980,
+            "text": "Zion",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1981,
+            "text": "Jax",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1982,
+            "text": "Ryder",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1983,
+            "text": "Knox",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1984,
+            "text": "Devitt",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1985,
+            "text": "Takagi",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1986,
+            "text": "Naito",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1987,
+            "text": "Ibushi",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1988,
+            "text": "Cobb",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1989,
+            "text": "Ospreay",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1990,
+            "text": "Walter",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1991,
+            "text": "Kaiser",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1992,
+            "text": "Vinci",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1993,
+            "text": "Bate",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1994,
+            "text": "Seven",
+            "formula": "",
+            "todo": false
+          }
+        ]
+      },
+      {
+        "id": 1995,
+        "name": "Mail: Absender · KHW",
+        "entries": [
+          {
+            "id": 1996,
+            "text": "{wrestler:show=Lucky7} (nach der letzten Show)",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1997,
+            "text": "{wrestler:show=TryOut} (hat zuletzt verloren)",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1998,
+            "text": "{wrestler:show=Lucky7;status=Main Event} (Main-Event-Star)",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 1999,
+            "text": "{team:show=Lucky7} (Tag Team)",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 2000,
+            "text": "{wrestler:show=TryOut;status=Newcomer} (Neuling)",
+            "formula": "",
+            "todo": false
+          }
+        ]
+      },
+      {
+        "id": 2001,
+        "name": "Mail: Absender · Fremde",
+        "entries": [
+          {
+            "id": 2002,
+            "text": "{wrestler:show=keine} (sucht einen Vertrag)",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 2003,
+            "text": "{wrestler:besonderheit=EX KHW} (Ex-KHW, will zurück)",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 2004,
+            "text": "{wrestler:promotion=Wrestlution} (von der Konkurrenz)",
+            "formula": "",
+            "todo": false
+          }
+        ]
+      },
+      {
+        "id": 2005,
+        "name": "Mail: Absender · Sonstige",
+        "entries": [
+          {
+            "id": 2006,
+            "text": "Hasso Klotz, Anwalt der Brauerei Pittermännchen (Sponsor)",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 2007,
+            "text": "Gabi Gerstner, Reporterin beim Ringtratsch",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 2008,
+            "text": "Ordnungsamt Köln-Deutz",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 2009,
+            "text": "Die Mutter von {wrestler:show=TryOut}",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 2010,
+            "text": "Kevin (42), Präsident des KHW-Fanclubs",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 2011,
+            "text": "Heinz Pflaume, Hausmeister des HK Casino",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 2012,
+            "text": "Influencerin Mandy Mega (2 Mio. Follower)",
+            "formula": "",
+            "todo": false
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "Tonalität",
+        "entries": [
+          {
+            "id": 4,
+            "text": "neutrale",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 26,
+            "text": "fröhliche",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 36,
+            "text": "Wunsch",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 47,
+            "text": "konstruktive",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 58,
+            "text": "fragende",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 67,
+            "text": "nette",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 78,
+            "text": "provokante",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 88,
+            "text": "bedrohliche",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 97,
+            "text": "kurze",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 105,
+            "text": "traurige",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 114,
+            "text": "Vertragsbezogene",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 123,
+            "text": "öffentliche",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 131,
+            "text": "private",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 141,
+            "text": "auf den Monat bezogene",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 161,
+            "text": "auf die letzte Show bezogene",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 196,
+            "text": "nostalgisch",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 206,
+            "text": "verzweifelte",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 222,
+            "text": "arrogante",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 228,
+            "text": "überraschte",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 234,
+            "text": "überraschende",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 244,
+            "text": "respektvolle",
+            "formula": "",
+            "todo": false
+          }
+        ]
+      },
+      {
+        "id": 2013,
+        "name": "Mail: Themen",
+        "entries": [
+          {
+            "id": 2014,
+            "text": "will mehr Sendezeit",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 2015,
+            "text": "fühlt sich vom Booking übergangen",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 2016,
+            "text": "bietet einen dubiosen Deal an",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 2017,
+            "text": "will eine Titelchance",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 2018,
+            "text": "droht mit Kündigung",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 2019,
+            "text": "hat peinliche Fotos von jemandem",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 2020,
+            "text": "will Werbung im Ring platzieren",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 2021,
+            "text": "braucht dringend Geld",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 2022,
+            "text": "schlägt eine absurde PR-Aktion vor",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 2023,
+            "text": "beschwert sich über das Catering",
+            "formula": "",
+            "todo": false
+          }
+        ]
+      },
+      {
+        "id": 2034,
+        "name": "Termin: Personen",
+        "entries": [
+          {
+            "id": 2035,
+            "text": "{wrestler:show=Lucky7}",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 2036,
+            "text": "{wrestler:show=TryOut}",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 2037,
+            "text": "{team:show=Lucky7}",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 2038,
+            "text": "Ralf Rüdiger, Chef der Brauerei Pittermännchen",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 2039,
+            "text": "Dr. Pillmann, Ringarzt mit fragwürdiger Lizenz",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 2040,
+            "text": "Gabi Gerstner vom Ringtratsch",
+            "formula": "",
+            "todo": false
+          }
+        ]
+      },
+      {
+        "id": 2041,
+        "name": "Termin: Orte",
+        "entries": [
+          {
+            "id": 2042,
+            "text": "im Büro",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 2043,
+            "text": "an der Bar des HK Casino",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 2044,
+            "text": "in der Umkleide",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 2045,
+            "text": "im Parkhaus",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 2046,
+            "text": "beim Catering",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 2047,
+            "text": "im Krankenhaus",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 2048,
+            "text": "auf dem Domplatz",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 2049,
+            "text": "im Brauhaus",
+            "formula": "",
+            "todo": false
+          }
+        ]
+      },
+      {
+        "id": 2050,
+        "name": "Termin: Anlass",
+        "entries": [
+          {
+            "id": 2051,
+            "text": "will unter vier Augen reden",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 2052,
+            "text": "hat ein Geheimnis ausgeplaudert",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 2053,
+            "text": "eskaliert gerade",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 2054,
+            "text": "braucht einen Gefallen",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 2055,
+            "text": "fordert eine Entschuldigung",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 2056,
+            "text": "macht ein unmoralisches Angebot",
+            "formula": "",
+            "todo": false
+          }
+        ]
+      },
+      {
+        "id": 2057,
+        "name": "News: Quellen",
+        "entries": [
+          {
+            "id": 2058,
+            "text": "Ringtratsch (Klatschblatt)",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 2059,
+            "text": "Kölner Express",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 2060,
+            "text": "WrestleWatch (Podcast)",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 2061,
+            "text": "Social Media",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 2062,
+            "text": "Wrestlution (Konkurrenz)",
+            "formula": "",
+            "todo": false
+          }
+        ]
+      },
+      {
+        "id": 2063,
+        "name": "News: Schlagzeilen",
+        "entries": [
+          {
+            "id": 2064,
+            "text": "{wrestler:show=Lucky7} mit Prinzenmütze im Karneval erwischt",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 2065,
+            "text": "Fans fordern Rückkehr von {wrestler:besonderheit=EX KHW}",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 2066,
+            "text": "Gerücht: Trennung bei {team:show=Lucky7}?",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 2067,
+            "text": "Wrestlution lästert über KHW",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 2068,
+            "text": "{wrestler:show=TryOut} startet eigene Kochshow",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 2069,
+            "text": "Werbespot des Sponsors löst Shitstorm aus",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 2070,
+            "text": "Wer war der Mann mit der Maske im HK Casino?",
+            "formula": "",
+            "todo": false
+          }
+        ]
+      }
+    ],
+    "seeded": [
+      "vertrag-v1",
+      "vertrag-v2-internet",
+      "vertrag-v3-antworten",
+      "vertrag-v4-ohne-antworten",
+      "verletzungen-v1",
+      "mitarbeiter-v1",
+      "postfach-v1"
+    ],
+    "links": {
+      "contract.demands": [
+        1348
+      ],
+      "contract.concessions": [
+        1485
+      ],
+      "interaction.tone": [
+        3
+      ],
+      "injury.reason": [
+        1522
+      ],
+      "staff.advantage": [
+        1533
+      ],
+      "staff.advantageRare": [
+        1563
+      ],
+      "staff.firstName": [
+        1598
+      ],
+      "staff.lastName": [
+        1799
+      ],
+      "inbox.meet.place": [
+        2041
+      ],
+      "inbox.combo.c2071.a": [
+        1995
+      ],
+      "inbox.combo.c2071.b": [
+        2013
+      ],
+      "inbox.combo.c2072.a": [
+        2001
+      ],
+      "inbox.combo.c2072.b": [
+        2013
+      ],
+      "inbox.combo.c2073.a": [
+        2005
+      ],
+      "inbox.combo.c2073.b": [
+        2013
+      ],
+      "inbox.combo.c2074.a": [
+        2034
+      ],
+      "inbox.combo.c2074.b": [
+        2050
+      ],
+      "inbox.combo.c2075.a": [
+        2057
+      ],
+      "inbox.combo.c2075.b": [
+        2063
+      ]
+    },
+    "guessed": [
+      "contract.demands",
+      "contract.concessions",
+      "interaction.tone",
+      "injury.reason",
+      "staff.advantage",
+      "staff.advantageRare",
+      "staff.firstName",
+      "staff.lastName",
+      "inbox.mail.sender.khw",
+      "inbox.mail.sender.foreign",
+      "inbox.mail.sender.other",
+      "inbox.mail.topic",
+      "inbox.meet.person",
+      "inbox.meet.place",
+      "inbox.meet.reason",
+      "inbox.news.source",
+      "inbox.news.topic"
+    ],
+    "combos": [
+      {
+        "id": "c2071",
+        "kind": "mail",
+        "name": "KHW-Wrestler",
+        "weight": 50
+      },
+      {
+        "id": "c2072",
+        "kind": "mail",
+        "name": "Fremde Wrestler",
+        "weight": 15
+      },
+      {
+        "id": "c2073",
+        "kind": "mail",
+        "name": "Sonstige",
+        "weight": 35
+      },
+      {
+        "id": "c2074",
+        "kind": "meet",
+        "name": "Termine",
+        "weight": 100
+      },
+      {
+        "id": "c2075",
+        "kind": "news",
+        "name": "News",
+        "weight": 100
+      }
+    ],
+    "removed": [
+      {
+        "id": 24,
+        "name": "Belohnungen",
+        "entries": [
+          {
+            "id": 25,
+            "text": "4 Sterne",
+            "formula": "=L6/2&\" Sterne\"",
+            "todo": true
+          },
+          {
+            "id": 35,
+            "text": "20 Sterne",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 46,
+            "text": "10 Skillpunkte",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 57,
+            "text": "2 Skillpunkte",
+            "formula": "=ROUND(L6/4)&\" Skillpunkte\"",
+            "todo": true
+          },
+          {
+            "id": 66,
+            "text": "1600 Euro",
+            "formula": "=L6*200&\" Euro\"",
+            "todo": true
+          },
+          {
+            "id": 77,
+            "text": "3280 Follower",
+            "formula": "=L6/2*820&\" Follower\"",
+            "todo": true
+          }
+        ],
+        "removedAt": 1795198047253
+      },
+      {
+        "id": 2024,
+        "name": "Interaktion: Tonalität",
+        "entries": [
+          {
+            "id": 2025,
+            "text": "wütend",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 2026,
+            "text": "schleimig",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 2027,
+            "text": "verzweifelt",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 2028,
+            "text": "größenwahnsinnig",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 2029,
+            "text": "verschwörerisch",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 2030,
+            "text": "überdreht fröhlich",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 2031,
+            "text": "passiv-aggressiv",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 2032,
+            "text": "betrunken",
+            "formula": "",
+            "todo": false
+          },
+          {
+            "id": 2033,
+            "text": "beleidigt",
+            "formula": "",
+            "todo": false
+          }
+        ],
+        "removedAt": 1795198047253
+      }
+    ],
+    "cleanup1": true
+  },
+  "rules": {
+    "finance": {
+      "discounts": [
+        0,
+        25,
+        50,
+        75
+      ],
+      "fees": {
+        "ads": 20000,
+        "sponsoring": 40000
+      },
+      "adDiscount": 20,
+      "prices": {
+        "abo": 9.49,
+        "ppv": 15.49
+      },
+      "stream": {
+        "production": [
+          2000,
+          3800
+        ],
+        "internet": 850
+      },
+      "merch": [
+        {
+          "label": "Poster",
+          "cls": 0,
+          "share": [
+            2,
+            8
+          ],
+          "price": 11.95,
+          "online": [
+            550,
+            990
+          ]
+        },
+        {
+          "label": "T-Shirts, Caps und Masken",
+          "cls": 1,
+          "share": [
+            2,
+            12
+          ],
+          "price": 16.95,
+          "online": [
+            1500,
+            3900
+          ]
+        },
+        {
+          "label": "Autogramme und Unikate",
+          "cls": 2,
+          "share": [
+            2,
+            6
+          ],
+          "price": 120.95,
+          "online": [
+            1000,
+            2600
+          ],
+          "rare": true
+        }
+      ],
+      "staff": [
+        3200,
+        5750
+      ]
+    },
+    "titles": {
+      "extra": [
+        "Try me Out"
+      ],
+      "hidden": [
+        "Trios Champion Lucky7",
+        "Try me Out",
+        "Koffer (L7)"
+      ],
+      "main": {
+        "Lucky7": {
+          "m": "Lucky7 Champion (Male)",
+          "w": "Lucky7 Champion (Female)"
+        },
+        "TryOut": {
+          "m": "Try me Out",
+          "w": ""
+        }
+      }
+    },
+    "inbox": {
+      "count": [
+        15,
+        30,
+        30,
+        15,
+        10
+      ],
+      "kinds": {
+        "mail": 55,
+        "meet": 25,
+        "news": 20
+      },
+      "kindsPPV": {
+        "mail": 40,
+        "meet": 45,
+        "news": 15
+      },
+      "costOwn": 20,
+      "costAspect": 40,
+      "aspectBonus": 40,
+      "finalAfter": 4,
+      "sentences": 4,
+      "newsSentences": 2,
+      "maxTokens": 220,
+      "system": "Du bist die Spielwelt eines Wrestling-Management-Rollenspiels für Erwachsene. KHW (Knight & Hustler Wrestling) ist eine Wrestling-Liga aus Köln: wöchentlich die Shows TryOut (Nachwuchs) und Lucky7 im HK Casino, dazu PPVs. Die Spieler sind Mr. Knight und Mr. Hustler, die Eigentümer. Stil: überzeichnete Satire einer absurden Medienwelt, Figuren als Stereotypen, kein Kayfabe (echte Menschen hinter den Gimmicks). Du sprichst nur für die anderen Figuren, nie für Knight und Hustler, und entscheidest nichts für sie. Deutsch. Keine Einleitung, keine Listen, nichts wiederholen. Zeitangaben nur in Wochen."
+    },
+    "staff": {
+      "capacity": [
+        10,
+        10,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unlock": [
+        null,
+        null,
+        null,
+        null,
+        {
+          "money": 400000,
+          "stars": 400
+        },
+        {
+          "money": 800000,
+          "stars": 800
+        }
+      ],
+      "rareChance": 26,
+      "money": {
+        "normal": [
+          2000,
+          20000,
+          200
+        ],
+        "rare": [
+          10000,
+          250000,
+          1000
+        ]
+      },
+      "stars": {
+        "normal": [
+          20,
+          90,
+          10
+        ],
+        "rare": [
+          100,
+          250,
+          10
+        ]
+      },
+      "contractDays": [
+        1,
+        30
+      ],
+      "prodShare": {
+        "normal": [
+          5,
+          20
+        ],
+        "rare": [
+          10,
+          25
+        ]
+      },
+      "cooldownMinutes": 30,
+      "cooldownStars": 20,
+      "forge": {
+        "hours": 24,
+        "stars": 50,
+        "upgrade": {
+          "count": 5,
+          "rareChance": 100
+        },
+        "recycle": {
+          "count": 3,
+          "rareChance": 70
+        }
+      }
+    }
+  }
+}

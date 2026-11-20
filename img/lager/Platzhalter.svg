@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <!-- Platzhalter für Bilder im Lager (Apron, Bodenmatte, Pfosten …). Später durch eigene Bilder ersetzen (Regelwerk → Lager). -->
+  <rect x="6" y="6" width="108" height="108" rx="18" fill="#2b2622" stroke="#5a4f46" stroke-width="3" stroke-dasharray="8 6"/>
+  <path d="M30 46 60 32l30 14-30 14z" fill="#8a7a6c"/>
+  <path d="M30 46v32l30 14V60z" fill="#6f6257"/>
+  <path d="M90 46v32L60 92V60z" fill="#7d6f63"/>
+</svg>
