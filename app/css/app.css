@@ -138,6 +138,7 @@ h5 { font-size: 12px; font-weight: 500; color: var(--muted); text-transform: upp
 .prot-json { display: block; background: var(--surface); padding: 8px 10px; border-radius: 8px; }
 .prot-detail .actions { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
 .nav-pres { width: 7px; height: 7px; border-radius: 50%; background: var(--accent-2); margin-left: 6px; flex: none; box-shadow: 0 0 0 3px var(--accent-2-soft); }
+.rw-prev { white-space: nowrap; } .rw-prev .tier { margin: 0 2px 0 6px; } .rw-prev small { display: block; margin-top: 4px; }
 .presence { display: inline-flex; gap: 4px; } .presence:empty { display: none; }
 .pres { width: 30px; height: 30px; border-radius: 50%; display: grid; place-items: center; font-size: 11px; font-weight: 700; background: var(--accent-2-soft); color: var(--accent-2); border: 2px solid var(--accent-2); cursor: default; }
 .pres-warn { display: flex; align-items: center; gap: 8px; } .pres-warn .ms { color: var(--accent-2); }
@@ -527,6 +528,10 @@ button.dd:disabled { opacity: .6; cursor: not-allowed; } button.dd:disabled .ms 
 .end-opts .opt { display: flex; gap: 12px; align-items: flex-start; padding: 12px 14px; border-radius: 12px; background: var(--surface-2); border: 1px solid var(--line); cursor: pointer; }
 .end-opts .opt.on { background: var(--accent-soft); border-color: var(--accent); } .end-opts .opt input { accent-color: var(--accent); width: 18px; height: 18px; margin-top: 2px; }
 .end-opts .opt b { display: block; } .end-opts .opt small { display: block; }
+/* Rabatte bei „Show abrechnen“: Miete, Werbung und Großes Sponsoring unabhängig voneinander */
+.end-discounts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)) 220px; gap: 12px; margin-bottom: 14px; }
+.disc-line { display: grid; gap: 4px; min-width: 0; } .disc-line > span { font-size: 12px; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+@media (max-width: 900px) { .end-discounts { grid-template-columns: 1fr; } }
 .big-num { font: var(--display-w) 28px var(--display); margin-bottom: 12px; }
 /* Kontobewegungen wie früher: drei Spalten, chronologisch, mit Namen */
 .ledger li { gap: 16px; padding: 10px 0; align-items: baseline; } .ledger li > span:first-child { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
