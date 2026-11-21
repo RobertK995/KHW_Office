@@ -16,6 +16,7 @@ window.KHW = window.KHW || {};
     ['staff', 'Mitarbeiter', 'engineering'],
     ['storage', 'Lager', 'inventory_2'],
     ['skills', 'Fertigkeiten', 'casino'],
+    ['ranking', 'Ranking', 'leaderboard'],
     ['stories', 'Storylines', 'auto_stories'],
     ['inbox', 'Postfach', 'mail'],
     ['titles', 'Titel', 'emoji_events'],
@@ -221,6 +222,27 @@ window.KHW = window.KHW || {};
       <p class="hint">Gilt überall, wo gewürfelt wird (Vertragsverhandlung, Mails und Termine). Leer = Wert aus der Tabelle (grau angezeigt). Je höher die Stufe, desto leichter die Würfe.</p>`;
   }
 
+  /* ───────────── Ranking: Status-Stufen je Show ───────────── */
+  function ranking() {
+    const S = 'ranking', c = (K.conf.get('ranking') || {}).bands || {}, m = K.model;
+    const TIERS = ['Main Event', 'Uppercard', 'Midcard', 'Lowercard'];
+    const rows = (K.RANK_SHOWS || []).flatMap(show => [['m', 'Männer'], ['w', 'Frauen']].map(([g, gl]) => {
+      const key = show + '|' + g, own = c[key] || {}, pct = own.unit === 'pct', sheet = (m && m.rankSheetBands[key]) || {};
+      const list = m ? m.ranking[show][g].singles : [];
+      const count = t => list.filter(e => (e.band || 'Newcomer') === t).length;
+      const custom = TIERS.some(t => typeof own[t] === 'number');
+      return `<tr><td>${K.ui.showChip(show)} <b>${gl}</b><small>${list.length} im Ranking</small></td>
+        <td>${select(S, ['bands', key, 'unit'], own.unit || 'count', [['count', 'Anzahl'], ['pct', 'Prozent']])}</td>
+        ${TIERS.map(t => `<td>${num(S, ['bands', key, t], typeof own[t] === 'number' ? own[t] : null, { step: 1, min: 0, max: pct ? 100 : undefined, nullable: true, ph: pct ? '0' : (sheet[t] || 0), cls: 'xs' })}${pct ? '<span class="unit">%</span>' : ''}</td>`).join('')}
+        <td class="rw-prev">${TIERS.map(t => `${K.ui.tier(t)}${count(t)}`).join(' ')} ${K.ui.tier('Newcomer')}${count('Newcomer')}<small>${custom ? 'eigene Einstellung' : 'wie in der Tabelle'}</small></td></tr>`;
+    })).join('');
+    return `<section class="card rw-card">${head(S, 'Status-Stufen nach Platz', 'leaderboard')}<div class="card-b">
+        <div class="table-wrap"><table class="table rw-table"><thead><tr><th>Show</th><th>Einheit</th>${TIERS.map(t => `<th>${K.ui.tier(t)} ${esc(t)}</th>`).join('')}<th>So verteilt es sich jetzt</th></tr></thead><tbody>${rows}</tbody></table></div>
+        <p class="hint">Von oben nach unten: Die besten Plätze bekommen Main Event, dann Uppercard, Midcard und Lowercard; wer danach kommt, ist Newcomer.
+          <b>Anzahl</b> = feste Plätze (leer = wie in der Tabelle, grau angezeigt). <b>Prozent</b> = Anteil am Kader dieser Show, gerundet – passt sich an, wenn der Kader wächst oder schrumpft.
+          Alle Felder leer = Farben der Tabelle. Die Status selbst ändern sich wie bisher beim nächsten „Show beenden“; im Ranking zeigt ${icon('sync_problem')} schon vorher, wer auf- oder absteigt.</p></div></section>`;
+  }
+
   /* ───────────── Storylines: Belohnung ───────────── */
   function stories() {
     const c = Object.assign(K.conf.defaults('stories'), K.conf.get('stories') || {}), S = 'stories';
@@ -257,14 +279,14 @@ window.KHW = window.KHW || {};
         <p class="hint">Geht bei jeder Anfrage mit – deshalb kurz halten. Die Länge („höchstens … Sätze“) hängt die App selbst an. Modell und Token stellt ihr je Gerät in der Admin-Leiste unter „KI“ ein.</p></div></section>`;
   }
 
-  const RENDER = { contract, halls, finance, store, staff, storage, skills, stories, inbox, titles };
+  const RENDER = { contract, halls, finance, store, staff, storage, skills, ranking, stories, inbox, titles };
 
   K.views.rules = {
     title: 'Regelwerk', icon: 'rule', adminOnly: true,
     // Layout „Reiter“ (vom Nutzer gewählt): ein Bereich nach dem anderen
     render(m, st) {
       const tab = SECTIONS.some(s => s[0] === st.rwTab) ? st.rwTab : 'contract';
-      const intro = `<p class="hint">${icon('sync')} Änderungen werden sofort gespeichert und gelten für beide Spieler. „Klickdummy zurücksetzen“ lässt das Regelwerk unverändert; „Standard“ am jeweiligen Bereich stellt die ursprünglichen Werte wieder her.</p>`;
+      const intro = `<p class="hint">${icon('sync')} Änderungen werden sofort gespeichert und gelten für beide Spieler. „Standard“ am jeweiligen Bereich stellt die ursprünglichen Werte wieder her; ein Punkt am Reiter zeigt, dass dort etwas vom Standard abweicht.</p>`;
       return `${intro}<div class="seg rw-tabs">${SECTIONS.map(([id, label, ic]) => `<button class="${id === tab ? 'on' : ''}" data-set="rwTab" data-value="${id}">${icon(ic)}${label}${K.conf.changed(id) ? ' ·' : ''}</button>`).join('')}</div>
         ${RENDER[tab]()}`;
     },
