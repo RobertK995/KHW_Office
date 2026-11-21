@@ -185,7 +185,7 @@ window.KHW = window.KHW || {};
     const done = K.store.state.contracts.slice().reverse();
     const archive = done.length ? `<div class="table-wrap"><table class="table"><thead><tr><th>Wrestler</th><th>Show</th><th>Laufzeit</th><th class="num">Gehalt</th><th>Bedingungen</th><th class="num">Ab Show</th></tr></thead><tbody>${done.map(c =>
       `<tr><td>${u.wl(c.person)}</td><td>${u.showChip(c.show)}</td><td>${esc(durLabel(c.duration))}${c.endMonth ? `<br><small>${c.extended ? 'verlängert ' : ''}bis ${esc(c.endMonth)}</small>` : c.duration === 'Einmalig' ? '<br><small>bis zum ersten Auftritt</small>' : ''}</td><td class="num">${eur(c.price)}</td><td>${c.terms.map(esc).join('<br>') || '<span class="muted">keine</span>'}</td><td class="num">${typeof c.signedAt === 'number' ? c.signedAt : esc(m.show(c.signedAt) ? u.showTitle(m.show(c.signedAt)) : '')}</td></tr>`).join('')}</tbody></table></div>`
-      : u.empty('Im Klickdummy wurde noch kein Vertrag abgeschlossen.');
+      : u.empty('Noch kein Vertrag abgeschlossen.');
 
     return `<div class="contract-layout">
       <section class="card form-card">
