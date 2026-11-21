@@ -2,8 +2,10 @@
 //
 // Einstellungen gelten je Gerät und liegen nur im Browser (localStorage „khw.ai“), nie in einer Datei:
 //   live   false = Simulation (es geht KEINE Anfrage raus), true = echte Anfragen
-//   token  Hugging-Face-Token (HF_API_TOKEN)        model  Modellname
-// Eingestellt im Admin-Modus (Admin-Leiste → KI). Später übernimmt eine Supabase-Funktion den Token.
+//   token  Hugging-Face-Token (nur ohne Supabase)    model  Modellname
+// Umschalten im Admin-Modus (Admin-Leiste → KI). Mit Supabase liegt der Token auf dem Server (Edge Function „ki“).
+// Der Schalter gilt auch im Testmodus (getrennt): Die Anfrage geht dann ebenfalls über die Edge Function,
+// gespeichert wird das Ergebnis aber nur in der Test-Kopie.
 window.KHW = window.KHW || {};
 (function (K) {
   'use strict';
@@ -45,10 +47,11 @@ window.KHW = window.KHW || {};
      * Ohne „live“ oder ohne Token wird simuliert – es geht dann keine Anfrage raus.
      */
     /** Mit Supabase liegt der Token auf dem Server (Edge Function „ki“, Secret HF_API_TOKEN), nicht im Browser. */
-    get viaServer() { return !!(K.cloud && K.cloud.on && K.cloud.ready); },
+    // Auch im Testmodus: angemeldet ist man dort weiterhin, nur der Abgleich der Daten ist aus
+    get viaServer() { return !!(K.cloud && K.cloud.on && K.cloud.client); },
     async chat(messages, opt = {}) {
       const s = load();
-      // Mit Supabase nie direkt aus dem Browser senden: im Testmodus (getrennt) wird nur simuliert
+      // Mit Supabase nie direkt aus dem Browser senden (der Token liegt auf dem Server); noch nicht verbunden = simulieren
       const cloudOff = K.cloud && K.cloud.on && !this.viaServer;
       if (!s.live || cloudOff || (!s.token && !this.viaServer)) {
         await new Promise(r => setTimeout(r, 700));
