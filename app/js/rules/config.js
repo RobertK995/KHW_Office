@@ -115,6 +115,9 @@ window.KHW = window.KHW || {};
     /* Fertigkeiten (Charisma, Athletik …): eigene Stufe je Fertigkeit; nicht eingetragen = Wert aus der Tabelle.
        Gilt überall, wo gewürfelt wird (Vertrag, Postfach). */
     skills: { levels: {} },
+    /* Ranking: Status-Stufen nach Platz je Show und Geschlecht („TryOut|m“ …). Ohne Eintrag gelten die Farben der Tabelle.
+       { unit: 'count' | 'pct', 'Main Event': n, Uppercard: n, Midcard: n, Lowercard: n } – wer danach kommt, ist Newcomer. */
+    ranking: { bands: {} },
 
     /* Store: null = Artikel aus der Tabelle (Finanzen G3:I19). Sonst [{ name, cost, discountable }] mit cost als Ausgabe (positiv). */
     store: null,
