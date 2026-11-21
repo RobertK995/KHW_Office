@@ -11,6 +11,8 @@ window.KHW = window.KHW || {};
   // Farbbänder im Blatt "Ranking" → Zielstatus (aus Ranking.gs)
   const COLOR_STATUS = { '#fff2cc': 'Midcard', '#c9daf8': 'Main Event', '#f4cccc': 'Uppercard', '#d9d2e9': 'Lowercard', '#d9ead3': 'Newcomer' };
   const SHOWS = ['TryOut', 'Lucky7'];
+  const RANK_TIERS = ['Main Event', 'Uppercard', 'Midcard', 'Lowercard'];   // von oben; wer danach kommt, ist Newcomer
+  K.RANK_SHOWS = SHOWS;
 
   K.VENUES = {
     'HK Casino': { capacity: 490 }, 'Klassische Sportarena': { capacity: 1270 },
@@ -291,6 +293,25 @@ window.KHW = window.KHW || {};
   function buildRanking(m, sh) {
     // Statusbänder: Die Hintergrundfarbe der Position bestimmt den Status, den ein Wrestler dort haben soll.
     const bandCols = { 'TryOut|m': 3, 'TryOut|w': 14, 'Lucky7|m': 20, 'Lucky7|w': 31 };
+    // Wie viele Plätze je Stufe die Tabelle vorgibt (aus den Farben; Rest = Newcomer) – Standard und Vorschau im Regelwerk
+    m.rankSheetBands = {};
+    Object.entries(bandCols).forEach(([key, col]) => {
+      const c = {}; for (let r = 14; r < 14 + 100; r++) { const s = COLOR_STATUS[sh.bg(r, col)]; if (s && s !== 'Newcomer') c[s] = (c[s] || 0) + 1; }
+      m.rankSheetBands[key] = c;
+    });
+    // Eigene Einstellung (Regelwerk → Ranking): je Show und Geschlecht Anzahl oder Prozent je Stufe; sonst die Farben der Tabelle
+    const rconf = (K.conf.get('ranking') || {}).bands || {};
+    const bandFor = (key, i, n) => {
+      const own = rconf[key];
+      if (!own || !RANK_TIERS.some(t => typeof own[t] === 'number')) return COLOR_STATUS[sh.bg(14 + i, bandCols[key])] || '';
+      const pct = own.unit === 'pct';
+      let sum = 0;   // aufsummiert und erst dann gerundet, damit Prozente auch bei kleinen Kadern stimmen
+      for (const t of RANK_TIERS) {
+        sum += typeof own[t] === 'number' ? own[t] : pct ? 0 : (m.rankSheetBands[key][t] || 0);
+        if (i < (pct ? Math.round(n * sum / 100) : sum)) return t;
+      }
+      return 'Newcomer';
+    };
     const out = {};
     SHOWS.forEach(show => {
       out[show] = {};
@@ -298,7 +319,7 @@ window.KHW = window.KHW || {};
         const pool = m.roster.filter(w => w.gender.toLowerCase() === g && w.show.toLowerCase().includes(show.toLowerCase()) && w.elo !== null);
         const singles = pool.slice().sort((a, b) => b.elo - a.elo).map((w, i) => ({
           rank: i + 1, name: w.name, elo: w.elo, status: w.status,
-          band: COLOR_STATUS[sh.bg(14 + i, bandCols[show + '|' + g])] || '',
+          band: bandFor(show + '|' + g, i, pool.length),
         }));
         // Teams dieser Show und dieses Geschlechts: alle Mitglieder gehören dazu
         const inPool = new Set(pool.map(w => w.name));
