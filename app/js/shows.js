@@ -377,7 +377,7 @@ window.KHW = window.KHW || {};
           <label class="ro"><span>Stadt</span><input class="field" id="sv-stadt" data-sv="stadt" value="${esc(v.stadt)}"></label>
           <label class="ro"><span>Hallentyp</span>${sel('sv-halle', SR().HALL_NAMES, v.halle, 'data-sv="halle"')}</label>
         </div>
-        <p class="hint">Für die Abrechnung zählt nur der Hallentyp. ${SR().HALLS[v.halle] && SR().HALLS[v.halle].assumed ? 'Für die Besondere Arena gibt es in der Tabelle keine Formeln, die Werte sind vorläufig angenommen.' : ''}</p>
+        <p class="hint">Für die Abrechnung zählt nur der Hallentyp. ${SR().HALLS[v.halle] && SR().HALLS[v.halle].assumed ? 'Für die Besondere Arena sind die Werte vorläufig angenommen.' : ''}</p>
         ${sameDay(m, s)}
         <h5>Matches und Segmente <small>${o.matches.length} Einträge · ${starTxt(total) || '0 ★'}</small></h5>
         <div class="table-wrap"><table class="table edit-table"><thead><tr><th>#</th><th>Typ</th><th>Gewinner</th><th>Verlierer</th><th>Teilnehmer</th><th>Storyline</th><th>Wette</th><th>Notizen</th><th></th></tr></thead>
