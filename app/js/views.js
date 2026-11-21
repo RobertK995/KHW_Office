@@ -337,18 +337,16 @@ window.KHW = window.KHW || {};
       const f = m.finance, L = f.last;
       const line = (l, v, cls = '') => `<tr class="${cls}"><td>${esc(l)}</td><td class="num">${v}</td></tr>`;
       const tbl = rows => `<table class="table slim">${rows.join('')}</table>`;
-      const diff = L.sheetTotal !== null && Math.abs(L.sheetTotal - L.total) > 0.01;
       return `
         <div class="kpis">
           <div class="kpi">${icon('account_balance')}<div><small>Kontostand</small><b>${eur(f.balance)}</b><span>${f.entries && f.entries.length ? `zuletzt: ${esc(f.entries[f.entries.length - 1].text)}` : ''}</span></div></div>
-          <div class="kpi">${icon('trending_up')}<div><small>Gewinn letzte Show</small><b>${signed(L.total)}</b><span>${esc(L.venue)}${diff ? ` · Tabelle: ${eur(L.sheetTotal)}` : ''}</span></div></div>
+          <div class="kpi">${icon('trending_up')}<div><small>Gewinn letzte Show</small><b>${signed(L.total)}</b><span>${esc(L.venue)}</span></div></div>
           <div class="kpi">${icon('groups')}<div><small>Follower</small><b>${fmt(f.followers)}</b><span>${f.followerDelta >= 0 ? '+' : ''}${fmt(f.followerDelta)} zuletzt</span></div></div>
           <div class="kpi">${icon('subscriptions')}<div><small>KHW+ / PPV</small><b>${eur(f.prices.abo)} / ${eur(f.prices.ppv)}</b><span>Monatspreis / PPV-Preis</span></div></div>
         </div>
         ${K.endShowCard ? K.endShowCard(m) : ''}
         ${K.endShowSummary ? K.endShowSummary(L, f) : ''}
         <div class="grid g-2-1"><div>
-          ${L.dummy ? '' : card(`Abrechnung: ${L.venue}`, billing(L, f), { icon: 'receipt_long', aside: `<b class="total">${signed(L.total)}</b>` })}
           ${K.frame('bank', {
             url: 'online.bankhaus-goldzahn.de/konto/umsaetze',
             brand: `<div class="xf-brand bank-brand"><span class="bank-logo">G</span><div><b>Bankhaus Goldzahn &amp; Söhne</b><small>Geschäftskonto Knight &amp; Hustler Wrestling · IBAN DE00 3702 9418 2265 6031 92</small></div>
@@ -358,7 +356,7 @@ window.KHW = window.KHW || {};
         </div><div>
           ${card('Follower-Stufen', f.tiers.map(t => `<div class="tierbar"><div><b>${esc(t.label)}</b>${chip('Stufe ' + t.level, 'accent')}</div><div class="bar"><i style="width:${Math.min(100, f.followers / (t.steps[t.steps.length - 1] || 1) * 100)}%"></i>${t.steps.map(s => `<u style="left:${s / t.steps[t.steps.length - 1] * 100}%"></u>`).join('')}</div><small>${t.next ? `Nächste Stufe ab ${fmt(t.next)} Followern` : 'Höchste Stufe erreicht'}</small></div>`).join(''), { icon: 'stairs' })}
           ${card('Store', storeList(f), { icon: 'storefront', aside: (K.admin && K.admin.on ? `<a class="btn icon" href="#rules" data-set="rwTab" data-value="store" title="Admin: Artikel bearbeiten">${icon('edit')}</a>` : '') + discountSel('store') })}
-          ${card('Veranstaltungsorte und Extras', tbl(f.venues.map(x => line(x.name, discounted(x.price, K.discount ? K.discount('venue') : 0, true)))) + '<p class="hint">Der Rabatt gilt für Miete, Werbung und Großes Sponsoring beim Beenden der Show.</p>', { icon: 'location_city', aside: discountSel('venue') })}
+          ${card('Veranstaltungsorte und Extras', tbl(f.venues.map(x => line(x.name, discounted(x.price, K.discount ? K.discount(/^werbung/i.test(x.name) ? 'ads' : /sponsor/i.test(x.name) ? 'sponsoring' : 'venue') : 0, true)))) + '<p class="hint">Der Rabatt hier gilt für die Miete. Werbung und Großes Sponsoring haben eigene Rabatte bei „Show abrechnen“.</p>', { icon: 'location_city', aside: discountSel('venue') })}
           ${card('Vertragsklauseln', kv([['Werbung', f.adClause.map(wl).join(', ') || '–', true], ['Selbstbeteiligung Behandlungskosten', f.medicalClause.map(wl).join(', ') || '–', true]]), { icon: 'gavel' })}
         </div></div>`;
     },
