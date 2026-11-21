@@ -251,7 +251,7 @@ window.KHW = window.KHW || {};
 
   /* ───────────── Testmodus ─────────────
      Getrennt arbeitet dieses Gerät mit einer Kopie des Stands (im Browser): ausprobieren wie im alten Klickdummy,
-     nichts geht an Supabase, KI wird nur simuliert. Wieder verbinden verwirft die Kopie und lädt den Stand aus
+     nichts geht an Supabase; die KI folgt dem Schalter in den KI-Einstellungen (live = echte Anfragen). Wieder verbinden verwirft die Kopie und lädt den Stand aus
      Supabase – es wird dabei nichts gesendet. Der Schalter gilt je Gerät und übersteht das Neuladen. */
   const TEST_KEY = 'khw.cloud.test';
   // Beim Laden der Seite festgelegt (und beim Trennen umgestellt): ein verbundener Tab im selben Browser bleibt verbunden
@@ -284,7 +284,7 @@ window.KHW = window.KHW || {};
         .then(yes => { if (yes) reconnect(); });
     } else if (status === 'verbunden') {
       K.dialog.confirm({ title: 'Trennen und testen?', icon: 'science', ok: 'Trennen',
-        text: 'Dieses Gerät arbeitet dann mit einer Kopie des aktuellen Stands – zum Ausprobieren wie im alten Klickdummy. Nichts wird gespeichert oder an das andere Gerät geschickt, die KI wird nur simuliert.\n\nBeim Wiederverbinden wird die Kopie verworfen und der Stand aus Supabase geladen.' })
+        text: 'Dieses Gerät arbeitet dann mit einer Kopie des aktuellen Stands – zum Ausprobieren wie im alten Klickdummy. Nichts wird gespeichert oder an das andere Gerät geschickt. Die KI läuft wie in den KI-Einstellungen gewählt – live verbraucht also auch hier Kontingent.\n\nBeim Wiederverbinden wird die Kopie verworfen und der Stand aus Supabase geladen.' })
         .then(yes => { if (yes) disconnect().then(() => { K.toast('Testmodus: getrennt'); if (K.render) K.render(); }).catch(err => K.dialog.alert({ title: 'Trennen nicht möglich', icon: 'error', text: err.message })); });
     } else {
       K.dialog.confirm({ title: 'Neu verbinden?', icon: 'refresh', ok: 'Neu laden', text: (statusMsg ? statusMsg + '\n\n' : '') + 'Die Seite wird neu geladen und verbindet sich erneut mit Supabase.' })
