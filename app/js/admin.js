@@ -47,9 +47,7 @@ window.KHW = window.KHW || {};
           <a class="btn sm" href="#idbmap">${icon('account_tree')}Listen-Zuordnung</a>
           <a class="btn sm" href="#rules">${icon('rule')}Regelwerk</a>
           <button class="btn sm" data-adm="ai" title="KI-Einstellungen dieses Geräts">${icon('smart_toy')}KI${K.ai && K.ai.settings.live ? ' · live' : ' · Simulation'}</button>
-          <button class="btn sm" data-adm="export" title="Klickdummy und IDB als Datei sichern">${icon('download')}Stand sichern</button>
-          <label class="btn sm" title="Gesicherten Stand laden">${icon('upload')}Stand laden<input type="file" id="adm-file" accept=".json,application/json" hidden></label>
-          ${K.cloud && K.cloud.on ? '' : `<button class="btn sm" data-adm="reset">${icon('restart_alt')}Zurücksetzen</button>`}
+          <button class="btn sm" data-adm="export" title="Spielstand, Regelwerk und IDB als Datei sichern">${icon('download')}Stand sichern</button>          ${K.cloud && K.cloud.on ? '' : `<button class="btn sm" data-adm="reset">${icon('restart_alt')}Zurücksetzen</button>`}
         </span>
         <button class="btn icon" data-adm="off" title="Admin-Modus beenden">${icon('close')}</button>`;
     },
@@ -173,25 +171,6 @@ window.KHW = window.KHW || {};
     a.click(); URL.revokeObjectURL(a.href);
   }
 
-  function importState(file) {
-    const reader = new FileReader();
-    reader.onload = () => {
-      let data;
-      try { data = JSON.parse(reader.result); if (!data.store) throw new Error('Die Datei enthält keinen gesicherten Stand.'); }
-      catch (err) { K.dialog.alert({ title: 'Datei konnte nicht gelesen werden', icon: 'error', text: err.message }); return; }
-      K.dialog.confirm({ title: 'Stand laden?', icon: 'upload', danger: true, ok: 'Laden', text: `Gesichert am ${new Date(data.saved).toLocaleString('de-DE')}.\nDer aktuelle Stand (Shows, Verträge, Buchungen${data.idb ? ', IDB' : ''}${data.rules ? ', Regelwerk' : ''}) wird ersetzt.` })
-        .then(yes => {
-          if (!yes) return;
-          K.store.replace(data.store);
-          if (data.rules) K.conf.replace(data.rules);
-          if (data.idb) { try { localStorage.setItem(K.cloud ? K.cloud.key('khw.idb') : 'khw.idb', JSON.stringify(data.idb)); } catch (e) { /* zu groß */ } if (K.idbApi) K.idbApi.reload(); if (K.cloud) K.cloud.changed('idb'); }
-          K.rebuild();
-          K.toast('Stand geladen');
-        });
-    };
-    reader.readAsText(file);
-  }
-
   document.addEventListener('click', e => {
     const b = e.target.closest('[data-adm]');
     if (!b) return;
@@ -214,9 +193,6 @@ window.KHW = window.KHW || {};
           K.rebuild(); K.toast(`${name} entfernt`);
         });
     }
-  });
-  document.addEventListener('change', e => {
-    if (e.target.id === 'adm-file' && e.target.files[0]) { importState(e.target.files[0]); e.target.value = ''; }
   });
 
   /* ───────────── Wrestler in der Kartei bearbeiten ───────────── */
@@ -242,7 +218,7 @@ window.KHW = window.KHW || {};
       <div class="aw-grid">${WFIELDS.map(ctl).join('')}</div>
       <div class="actions"><button class="btn primary" data-adm="save-w" data-name="${esc(name)}">${icon('save')}Speichern</button>
         ${w.added ? `<button class="btn text" data-adm="del-w" data-name="${esc(name)}">${icon('person_remove')}Aus der Datenbank entfernen</button>` : ''}</div>
-      <p class="hint">Änderungen gelten im Klickdummy für beide Spieler. Die Tabelle bleibt unverändert.</p>
+      <p class="hint">Änderungen gelten sofort für beide Spieler.</p>
       <h4 class="section">${icon('psychology')} Gedächtnis der KI</h4>${((K.store.state.memory || {})[name] || []).length
         ? `<ul class="plain">${K.store.state.memory[name].map((x, i) => `<li>${esc(x.text)} <button class="btn icon" data-ib="forget" data-name="${esc(name)}" data-i="${i}" title="Vergessen">${icon('close')}</button></li>`).join('')}</ul>`
         : '<p class="hint">Noch keine Notizen aus Mails und Terminen.</p>'}</section>`;
