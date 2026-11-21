@@ -13,13 +13,19 @@ window.KHW = window.KHW || {};
   const SR = () => K.rules.show;
   const ui = () => K.ui;
 
-  // Rabatte (gemeinsam für beide Spieler), getrennt einstellbar: „store“ für Store-Artikel, „venue“ für Miete,
-  // Werbung und Großes Sponsoring. Gesetzt werden sie unten auf der Finanzen-Seite an der jeweiligen Liste.
+  // Rabatte (gemeinsam für beide Spieler), unabhängig voneinander: „store“ Store-Artikel, „venue“ Miete der Halle,
+  // „ads“ Werbung, „sponsoring“ Großes Sponsoring (beide letzteren bei „Show abrechnen“), „doctor“ Behandlungen.
   K.discount = kind => ((K.store.state.drafts.discounts || {})[kind]) || 0;
   K.setDiscount = (kind, v) => K.store.update(s => { s.drafts.discounts = Object.assign({}, s.drafts.discounts, { [kind]: v }); });
+  const discSel = (kind, label) => {
+    const d = K.discount(kind), steps = [...new Set([0, ...K.conf.get('finance').discounts, 100, d])].sort((a, b) => a - b);
+    return `<label class="disc-line"><span>${label}</span><select class="field" data-disc="${kind}">${steps.map(v => `<option value="${v}" ${v === d ? 'selected' : ''}>${v ? v + ' % Rabatt' : 'Kein Rabatt'}</option>`).join('')}</select></label>`;
+  };
 
-  // Einstellungen der Abrechnung: Werbung und Großes Sponsoring; der Rabatt kommt von den Veranstaltungsorten.
-  const opts = () => Object.assign({ ads: false, sponsoring: false }, K.store.state.drafts.endShow, { discount: K.discount('venue') });
+  // Einstellungen der Abrechnung: Werbung und Großes Sponsoring, dazu je ein eigener Rabatt für Miete, Werbung und Sponsoring
+  const opts = () => Object.assign({ ads: false, sponsoring: false }, K.store.state.drafts.endShow,
+    { discount: K.discount('venue'), discAds: K.discount('ads'), discSponsoring: K.discount('sponsoring') });
+  const feeDisc = (o, k) => (k === 'ads' ? o.discAds : o.discSponsoring);
   const setOpts = patch => K.store.update(s => { s.drafts.endShow = Object.assign({}, s.drafts.endShow, patch); });
 
   /**
@@ -39,7 +45,7 @@ window.KHW = window.KHW || {};
     const o = opts();
     const missing = s.matches.filter(mt => mt.stars === null).length;
     const betMt = s.matches.find(mt => mt.bet);
-    const fee = k => eur(SR().fee(k, o.discount));
+    const fee = k => eur(SR().fee(k, feeDisc(o, k)));
     return u.card(`Show abrechnen: ${u.showTitle(s)}`, `
       <div class="end-head">
         <div><small>${esc(u.showSub(s))}</small><div class="chips">${u.showChip(s.type === 'Event' ? '' : s.type)}<span class="chip outline">${esc([s.venue.stadt, s.venue.land].filter(Boolean).join(', '))} · ${esc(s.venue.halle)}</span></div></div>
@@ -49,12 +55,13 @@ window.KHW = window.KHW || {};
           <div><small>Wette</small><b>${betMt ? esc(betMt.winner || '–') : '–'}</b>${betMt ? '' : '<span class="muted">keine</span>'}</div>
         </div>
       </div>
+      <h5>Rabatte</h5>
+      <div class="end-discounts">${discSel('venue', `Miete · ${esc(s.venue.halle)}`)}${discSel('ads', 'Werbung')}${discSel('sponsoring', 'Großes Sponsoring')}</div>
       <h5>Extras</h5>
       <div class="end-opts">
         <label class="opt ${o.ads ? 'on' : ''}"><input type="checkbox" data-eo="ads" ${o.ads ? 'checked' : ''}><span><b>Werbung</b><small>${fee('ads')} · mehr Tickets und Streams, 20 % Rabatt auf Werbekosten</small></span></label>
         <label class="opt ${o.sponsoring ? 'on' : ''}"><input type="checkbox" data-eo="sponsoring" ${o.sponsoring ? 'checked' : ''}><span><b>Großes Sponsoring</b><small>${fee('sponsoring')} · Sponsoring-Einnahmen nach Stufe</small></span></label>
       </div>
-      ${o.discount ? `<p class="hint">${u.icon('sell')} Rabatt der Veranstaltungsorte: ${o.discount} % auf Miete, Werbung und Sponsoring.</p>` : ''}
       <div class="actions"><button class="btn primary" data-end="run">${u.icon('flag')}Show beenden</button>
         <a class="btn text" href="#shows" data-set="show" data-value="${esc(s.key)}">Zur Show</a></div>
       <p class="hint">Beim Beenden: Sterne übertragen → Wette auszahlen → Einnahmen buchen → ELO aktualisieren → Auf- und Abstiege übernehmen. Danach ist die Show gesperrt.</p>`,
@@ -69,7 +76,13 @@ window.KHW = window.KHW || {};
    *   Ausklappbar  ELO, Sterne je Segment, vollständige Abrechnung
    */
   K.endShowSummary = (L, f) => {
-    if (!L || !L.dummy) return '';
+    if (!L) return '';
+    // Noch keine Show in der App beendet: letzte Abrechnung aus der Tabelle im selben Look (ohne ELO und Sterne je Segment,
+    // die stehen dort nicht)
+    if (!L.dummy) {
+      L = Object.assign({}, L, { fromSheet: true, showTitle: 'letzte Show aus der Tabelle', income: L.total - (L.betGain || 0), stars: (f && f.stars && f.stars.lastShow) || 0,
+        followerDelta: (f && f.followerDelta) || 0, starRows: [], elo: [], fees: {}, statusChanges: [], titleChanges: [], betRows: (f && f.bets) || [], betNote: 'Keine Wette.' });
+    }
     const u = ui();
     const n1 = x => fmt(x, x % 1 ? 1 : 0);
     const starRows = L.starRows.filter(r => r.stars !== null);
@@ -91,12 +104,13 @@ window.KHW = window.KHW || {};
     const secondary = `<div class="grid g-3 tight result-secondary">
       <div><h5>Auslastung · ${esc(L.hall || L.venue)}</h5>${load === null ? u.empty('Kapazität unbekannt.') : `<div class="load-line"><b>${fmt(load, load < 10 ? 1 : 0)} %</b><small>${fmt(L.visitors)} von ${fmt(L.capacity)} Plätzen</small></div>
         <div class="bar load-bar"><i style="width:${load}%"></i></div>`}</div>
-      <div><h5>Auf- und Abstiege</h5>${L.statusChanges.length ? `<ul class="plain">${L.statusChanges.map(c => `<li>${u.icon(c.up ? 'arrow_upward' : 'arrow_downward')} ${u.wl(c.name)} ${u.tier(c.from)} → ${u.tier(c.to)}</li>`).join('')}</ul>` : u.empty('Keine Änderungen.')}
+      <div><h5>Auf- und Abstiege</h5>${L.fromSheet ? u.empty('Wurden in der Tabelle übernommen.') : L.statusChanges.length ? `<ul class="plain">${L.statusChanges.map(c => `<li>${u.icon(c.up ? 'arrow_upward' : 'arrow_downward')} ${u.wl(c.name)} ${u.tier(c.from)} → ${u.tier(c.to)}</li>`).join('')}</ul>` : u.empty('Keine Änderungen.')}
         ${(L.titleChanges || []).length ? `<h5 class="sub-h">Titel</h5><ul class="plain">${L.titleChanges.map(c => `<li>${u.icon('emoji_events')} <b>${esc(c.title)}</b>: ${c.defended ? `${u.wlList(c.to.replace(/\s*&\s*/g, ', '))} verteidigt` : `${c.from ? esc(c.from) + ' → ' : ''}${u.wlList(c.to.replace(/\s*&\s*/g, ', '))}`}</li>`).join('')}</ul>` : ''}</div>
       <div><h5>Wette</h5>${bw ? `<div class="bet-line"><div>${u.wl(bw.name)} <small>Rang ${fmt(bw.rank)} · Quote ${fmt(bw.quote, 1)} %</small></div><b>${u.signed(L.betGain)}</b></div>` : u.empty(L.betNote || 'Keine Wette.')}</div>
     </div>`;
 
-    const more = `<details class="more"><summary>Weitere Infos: ELO, Sterne je Segment, Abrechnung</summary>
+    const more = L.fromSheet ? `<details class="more"><summary>Weitere Infos: Abrechnung</summary><h5>Abrechnung · ${esc(L.venue)}</h5>${f ? u.billing(L, f) : ''}</details>`
+      : `<details class="more"><summary>Weitere Infos: ELO, Sterne je Segment, Abrechnung</summary>
       <div class="grid g-2 tight">
         <div><h5>ELO</h5>${elo.length ? `<table class="table slim">${elo.map(c => `<tr><td>${u.wl(c.name)}</td><td class="num">${fmt(c.from, 1)} → <b>${fmt(c.to, 1)}</b></td><td class="num ${c.to >= c.from ? 'pos' : 'neg'}">${c.to >= c.from ? '+' : ''}${fmt(c.to - c.from, 1)}</td></tr>`).join('')}</table>` : u.empty('Kein entschiedenes Match.')}</div>
         <div><h5>Sterne je Segment</h5>${starRows.length ? `<table class="table slim">${starRows.map(r => `<tr><td>${esc(r.label)}</td><td class="num">${n1(r.stars)} ★${r.bonus ? ` <small class="pos">+${n1(r.bonus)} Bonus</small>` : ''}</td></tr>`).join('')}</table>` : u.empty('Keine Sterne eingetragen.')}</div>
@@ -128,7 +142,7 @@ window.KHW = window.KHW || {};
     // Titelmatches: Sieger bekommen den Titel
     const titles = R.titleChanges(m, s);
 
-    const fees = { ads: o.ads ? R.fee('ads', o.discount) : 0, sponsoring: o.sponsoring ? R.fee('sponsoring', o.discount) : 0 };
+    const fees = { ads: o.ads ? R.fee('ads', o.discAds) : 0, sponsoring: o.sponsoring ? R.fee('sponsoring', o.discSponsoring) : 0 };
     const bookings = [{ text: `Show-Einnahmen ${title}`, amount: fin.income, show: key }];
     if (bet.gain) bookings.push({ text: `Wette ${title}`, amount: bet.gain, show: key });
     if (fees.ads) bookings.push({ text: `Werbung ${title}`, amount: -fees.ads, show: key });
@@ -260,7 +274,7 @@ window.KHW = window.KHW || {};
     const extras = [o.ads && 'Werbung', o.sponsoring && 'Großes Sponsoring'].filter(Boolean).join(' und ') || 'keine';
     K.dialog.confirm({
       title: `${u.showTitle(s)} beenden?`, icon: 'flag', ok: 'Show beenden',
-      text: `${s.matches.length} Einträge · ${fmt(s.stars, s.stars % 1 ? 1 : 0)} Sterne${missing ? ` (${missing} ohne Sterne)` : ''}\nHalle: ${s.venue.halle}${s.type === 'PPV' ? ' · PPV' : ''}\nExtras: ${extras} · Rabatt ${o.discount} %\n\nDanach ist die Show gesperrt.`,
+      text: `${s.matches.length} Einträge · ${fmt(s.stars, s.stars % 1 ? 1 : 0)} Sterne${missing ? ` (${missing} ohne Sterne)` : ''}\nHalle: ${s.venue.halle}${s.type === 'PPV' ? ' · PPV' : ''}\nExtras: ${extras}\nRabatt: Miete ${o.discount} %${o.ads ? ` · Werbung ${o.discAds} %` : ''}${o.sponsoring ? ` · Sponsoring ${o.discSponsoring} %` : ''}\n\nDanach ist die Show gesperrt.`,
     }).then(yes => { if (yes) endShow(s.key, o); });
   });
 })(window.KHW);
