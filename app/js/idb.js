@@ -338,33 +338,31 @@ window.KHW = window.KHW || {};
 
       const side = `<aside class="note-list">
           <button class="btn tonal" data-idb="newList">${icon('add')}Neue Liste</button>
-          <ul>${d.lists.map(l => { const open = l.entries.filter(e => e.todo).length; return `<li class="${list && l.id === list.id ? 'active' : ''}" data-idb="openList" data-id="${l.id}">
-            <b>${esc(l.name || 'Ohne Namen')}</b><small>${l.entries.length} Einträge${open ? ` · ${open} alte Formeln offen` : ''}</small></li>`; }).join('') || '<li class="none"><small>Noch keine Listen.</small></li>'}</ul>
+          <ul>${d.lists.map(l => `<li class="${list && l.id === list.id ? 'active' : ''}" data-idb="openList" data-id="${l.id}">
+            <b>${esc(l.name || 'Ohne Namen')}</b><small>${l.entries.length} Einträge</small></li>`).join('') || '<li class="none"><small>Noch keine Listen.</small></li>'}</ul>
           <div class="idb-io">
-            <button class="btn" data-idb="importSheet" title="Liest das Blatt IDB einmalig aus der Tabelle">${icon('cloud_download')}Aus Tabelle übernehmen</button>
             <button class="btn" data-idb="export">${icon('download')}Als Datei sichern</button>
             <label class="btn">${icon('upload')}Datei laden<input type="file" id="idb-file" accept=".json,application/json" hidden></label>
           </div>
-          <p class="hint">${icon('info')} Gespeichert wird im Browser dieses Geräts. Für eine Sicherung „Als Datei sichern“ nutzen.</p>
+          <p class="hint">${icon('info')} Änderungen gelten sofort für beide Spieler. „Als Datei sichern“ legt zusätzlich eine Kopie auf diesem Gerät ab.</p>
         </aside>`;
 
-      if (!list) return `<div class="notes-layout">${side}<section class="card"><div class="card-b"><p class="empty">Lege eine Liste an (z. B. „Tonalität“ oder „Themen Lucky7“) oder übernimm die bestehenden Einträge aus der Tabelle.</p></div></section></div>`;
+      if (!list) return `<div class="notes-layout">${side}<section class="card"><div class="card-b"><p class="empty">Lege eine Liste an (z. B. „Tonalität“ oder „Themen Lucky7“).</p></div></section></div>`;
 
       const q = (st.idbQuery || '').toLowerCase();
-      const rows = list.entries.filter(e => (!q || e.text.toLowerCase().includes(q)) && (!st.idbTodo || e.todo));
+      const rows = list.entries.filter(e => !q || e.text.toLowerCase().includes(q));
 
       const params = fn ? `<div class="idb-params"><b>${icon(fn.icon)}${esc(fn.label)}</b><small>${esc(fn.hint)}</small><div class="idb-fields">${fn.params(m).map(([k, label, opts]) =>
           `<label>${esc(label)}${opts ? `<select class="field" data-p="${k}">${opts.map(o => { const [v, l] = Array.isArray(o) ? o : [o, o || 'egal']; return `<option value="${esc(v)}">${esc(l)}</option>`; }).join('')}</select>` : `<input class="field" data-p="${k}">`}</label>`).join('')}</div>
           <div class="toolbar"><button class="btn tonal" data-idb="insert">${icon('add')}Einfügen</button><button class="btn text" data-idb="func" data-id="">Abbrechen</button></div></div>` : st.idbFunc === 'ref' ? refParams(entry) : '';
 
       const editor = entry ? `<section class="card idb-editor"><header class="card-h"><h3>${icon('edit')}Eintrag bearbeiten</h3>
-            <div><button class="btn text" data-idb="toggleTodo">${entry.todo ? 'Formel als umgesetzt markieren' : 'Wieder als offen markieren'}</button><button class="btn icon" data-idb="delEntry" title="Eintrag löschen">${icon('delete')}</button></div></header>
+            <div><button class="btn icon" data-idb="delEntry" title="Eintrag löschen">${icon('delete')}</button></div></header>
           <div class="card-b">
             <div class="idb-funcs"><small>Variable einfügen:</small>${Object.entries(FUNCS).map(([k, f]) => `<button class="chip ${st.idbFunc === k ? 'accent' : 'outline'}" data-idb="func" data-id="${k}" title="${esc(f.hint)}">${icon(f.icon)}${esc(f.label)}</button>`).join('')}
               <button class="chip ${st.idbFunc === 'ref' ? 'accent' : 'outline'}" data-idb="func" data-id="ref" title="Weitere Angabe zu einem Wrestler, der in diesem Eintrag schon gezogen wurde">${icon('link')}Gleicher Wrestler</button></div>
             ${params}
             <textarea id="idb-text" class="idb-text" spellcheck="true" placeholder="Text des Eintrags. Variablen stehen in geschweiften Klammern.">${esc(entry.text)}</textarea>
-            ${entry.formula ? `<details><summary>Ursprüngliche Formel aus der Tabelle</summary><pre class="idb-formula">${esc(entry.formula)}</pre></details>` : ''}
             <div class="idb-preview"><div><small>${previewWho(m)}</small><button class="btn text" data-idb="reroll">${icon('casino')}Neu würfeln</button></div><p id="idb-preview">${previewHtml(entry.text, m)}</p></div>
           </div></section>` : '';
 
@@ -374,9 +372,9 @@ window.KHW = window.KHW || {};
           ${editor}
           <section class="card"><div class="card-b">
             <div class="toolbar wrap"><input id="idb-query" class="field grow" type="search" placeholder="In dieser Liste suchen …" value="${esc(st.idbQuery || '')}">
-              <label class="check"><input type="checkbox" id="idb-todo" ${st.idbTodo ? 'checked' : ''}> nur offene alte Formeln</label><span class="count">${rows.length} von ${list.entries.length}</span></div>
+              <span class="count">${rows.length} von ${list.entries.length}</span></div>
             <ul class="idb-entries">${rows.map(e => `<li class="${entry && e.id === entry.id ? 'active' : ''}" data-idb="openEntry" data-id="${e.id}"><span>${esc(e.text) || '<i>Leer</i>'}</span>
-              ${e.todo ? '<span class="chip promo" title="War in der Tabelle eine Formel und ist hier noch fester Text">alte Formel</span>' : ''}${varCount(e.text) ? `<span class="chip accent">${varCount(e.text)} Var.</span>` : ''}
+              ${varCount(e.text) ? `<span class="chip accent">${varCount(e.text)} Var.</span>` : ''}
               <button class="btn icon idb-quick-del" data-idb="quickDel" data-id="${e.id}" title="Eintrag löschen">${icon('delete')}</button></li>`).join('') || '<li class="none">Keine Einträge.</li>'}</ul>
           </div></section></div></div>`;
     },
@@ -520,34 +518,6 @@ window.KHW = window.KHW || {};
     const t = $('#idb-text'); if (t) { t.focus(); t.setSelectionRange(caret[0], caret[1]); }
   }
 
-  /** Übernimmt das Blatt IDB einmalig aus der Tabelle. Formelzellen kommen mit ihrem aktuellen Text und sind als „alte Formel“ markiert. */
-  async function importSheet() {
-    const cfg = window.KHW_CONFIG || {};
-    if (!cfg.apiUrl) throw new Error('Keine Verbindung zur Tabelle eingerichtet.');
-    const res = await fetch(cfg.apiUrl + '?token=' + encodeURIComponent(cfg.token) + '&sheets=IDB');
-    const data = await res.json();
-    if (!data.ok || !data.sheets.IDB || !data.sheets.IDB.cells) throw new Error(data.error || 'Blatt IDB nicht gefunden');
-    const cells = data.sheets.IDB.cells, head = {};
-    cells.forEach(c => { if (c[0] === 1) head[c[1]] = String(c[3]).trim(); });
-    // Spalten: A Tonalität · B–F Absendergruppen · G–K Themen je Gruppe · N Belohnungen
-    const names = { 1: 'Tonalität', 14: 'Belohnungen' };
-    for (let c = 2; c <= 6; c++) names[c] = 'Absender: ' + (head[c] || 'Spalte ' + c).replace(/\s*\(.*$/, '');
-    for (let c = 7; c <= 11; c++) names[c] = 'Themen: ' + (head[c] || 'Spalte ' + c).replace(/\s*\(.*$/, '');
-    // Spalte F hat in der Tabelle keine Überschrift: Schon die erste Zeile ist ein Eintrag. Sie gehört zu den Themen „Sonstiges“ (Spalte K).
-    names[6] = 'Absender: Sonstiges';
-    let added = 0;
-    cells.forEach(c => {
-      const name = names[c[1]], text = String(c[3]).trim();
-      if (!name || (c[0] === 1 && c[1] !== 6) || !text) return;
-      let list = db.lists.find(l => l.name === name);
-      if (!list) { list = { id: id(), name, entries: [] }; db.lists.push(list); }
-      if (list.entries.some(e => e.text === text)) return;
-      list.entries.push({ id: id(), text, formula: c[4] || '', todo: !!c[4] });
-      added++;
-    });
-    save();
-    return added;
-  }
 
   document.addEventListener('click', e => {
     const act = e.target.closest('[data-idb]');
@@ -580,7 +550,6 @@ window.KHW = window.KHW || {};
         .then(yes => { if (!yes) return; list.entries.splice(list.entries.indexOf(entry), 1); st.idbEntry = null; save(); K.render(); });
       return;
     }
-    else if (what === 'toggleTodo') { if (!entry) return; entry.todo = !entry.todo; }
     else if (what === 'func') { st.idbFunc = act.dataset.id; }
     else if (what === 'reroll') { refreshPreview(); return; }
     else if (what === 'insertRef') {
@@ -601,12 +570,6 @@ window.KHW = window.KHW || {};
       const a = document.createElement('a');
       a.href = URL.createObjectURL(new Blob([JSON.stringify(d, null, 2)], { type: 'application/json' }));
       a.download = 'khw-idb.json'; a.click(); URL.revokeObjectURL(a.href); return;
-    }
-    else if (what === 'importSheet') {
-      act.disabled = true;
-      importSheet().then(n => { K.render(); K.dialog.alert({ title: 'Übernahme abgeschlossen', icon: 'cloud_done', text: n ? `${n} Einträge aus der Tabelle übernommen.` : 'Es gab nichts Neues zu übernehmen.' }); })
-        .catch(err => { K.render(); K.dialog.alert({ title: 'Übernahme fehlgeschlagen', icon: 'error', text: err.message }); });
-      return;
     }
     save(); K.render();
     if (what === 'newEntry') { const t = $('#idb-text'); if (t) t.focus(); }
@@ -632,7 +595,6 @@ window.KHW = window.KHW || {};
 
   document.addEventListener('change', e => {
     const st = K.state;
-    if (e.target.id === 'idb-todo') { st.idbTodo = e.target.checked; K.render(); }
     if (e.target.id === 'idb-file' && e.target.files[0]) {
       const reader = new FileReader();
       reader.onload = () => {
