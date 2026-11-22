@@ -892,3 +892,22 @@ a.chip.hurt-chip.big, a.chip.away-chip.big { display: inline-flex; margin: 0 6px
 .ib-memory { margin-top: 14px; padding: 10px 12px; border-radius: 10px; background: var(--accent-2-soft); color: var(--accent-2); font-size: 13px; display: grid; gap: 6px; }
 .ib-memory > b { display: inline-flex; align-items: center; gap: 6px; } .ib-memory ul { margin: 2px 0 0; padding-left: 18px; color: var(--text); } .ib-memory .btn.icon { width: 22px; height: 22px; } .ib-memory .btn.icon .ms { font-size: 14px; }
 .ib-compose textarea.field { height: auto; min-height: 84px; padding: 10px 12px; resize: vertical; line-height: 1.5; }
+
+/* Rivalen Aktionen: reine Ansicht mit Suche (rivalen.js). Eine Tabelle für alle Kategorien, daher stehen die Spalten überall untereinander. */
+.rv-list { background: var(--surface); border: 1px solid var(--card-border); border-radius: var(--radius); overflow: clip; margin-bottom: 16px; }
+.rv-table { table-layout: fixed; }
+.rv-table col.c-name { width: 21%; } .rv-table col.c-who { width: 16%; } .rv-table col.c-text { width: 32%; } .rv-table col.c-note { width: 19%; } .rv-table col.c-use { width: 12%; }
+.rv-table th:first-child, .rv-table td:first-child { padding-left: 20px; } .rv-table th:last-child, .rv-table td:last-child { padding-right: 20px; }
+.rv-table thead th { position: sticky; top: 68px; z-index: 2; background: var(--solid); padding-top: 12px; padding-bottom: 12px; }
+.rv-table tr.rv-cat th { padding: 28px 20px 10px; background: none; color: var(--text); font-size: 15px; font-weight: 600; white-space: normal; border-bottom: 1px solid var(--outline); }
+.rv-cat-in { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.rv-cat-t { display: inline-flex; align-items: center; gap: 8px; } .rv-cat-t .ms { color: var(--accent); }
+.rv-count { color: var(--muted); font-size: 12px; font-weight: 400; }
+.rv-table tbody tr[data-i]:hover { background: var(--surface-2); }
+.rv-table tr:last-child td { border-bottom: 1px solid var(--line); }
+.rv-table td.rv-name b { font-weight: 600; margin-right: 6px; }
+.rv-table td.rv-use { white-space: nowrap; } .rv-table td.rv-who .chip { white-space: normal; height: auto; line-height: 1.35; padding-top: 3px; padding-bottom: 3px; }
+.rv-table td.rv-note { color: var(--muted); }
+.rv-table .chip { margin: 1px 4px 1px 0; }
+.rv-none { padding: 20px; margin: 0; }
+@media (max-width: 1100px) { .rv-list { overflow-x: auto; } .rv-table { min-width: 940px; } .rv-table thead th { position: static; } }
