@@ -65,6 +65,7 @@
     interaction: 'Mails und Schicksals-Szenen mit der Spielleitung',
     bar: 'Gespräche an der Bar des HK Casino',
     notes: 'Gemeinsame Notizen für beide Spieler',
+    rivals: 'Alle Rivalen-Aktionen nach Kategorie, mit Suche und Filtern',
     idb: 'Listen und Einträge für Mails, Szenen und Verträge pflegen',
     idbmap: 'Welche IDB-Liste speist welche Stelle der App',
     rules: 'Zahlen und Regeln, die ohne neuen Code einstellbar sind',
