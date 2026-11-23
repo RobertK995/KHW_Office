@@ -357,7 +357,6 @@ window.KHW = window.KHW || {};
           ${card('Follower-Stufen', f.tiers.map(t => `<div class="tierbar"><div><b>${esc(t.label)}</b>${chip('Stufe ' + t.level, 'accent')}</div><div class="bar"><i style="width:${Math.min(100, f.followers / (t.steps[t.steps.length - 1] || 1) * 100)}%"></i>${t.steps.map(s => `<u style="left:${s / t.steps[t.steps.length - 1] * 100}%"></u>`).join('')}</div><small>${t.next ? `Nächste Stufe ab ${fmt(t.next)} Followern` : 'Höchste Stufe erreicht'}</small></div>`).join(''), { icon: 'stairs' })}
           ${card('Store', storeList(f), { icon: 'storefront', aside: (K.admin && K.admin.on ? `<a class="btn icon" href="#rules" data-set="rwTab" data-value="store" title="Admin: Artikel bearbeiten">${icon('edit')}</a>` : '') + discountSel('store') })}
           ${card('Veranstaltungsorte und Extras', tbl(f.venues.map(x => line(x.name, discounted(x.price, K.discount ? K.discount(/^werbung/i.test(x.name) ? 'ads' : /sponsor/i.test(x.name) ? 'sponsoring' : 'venue') : 0, true)))) + '<p class="hint">Der Rabatt hier gilt für die Miete. Werbung und Großes Sponsoring haben eigene Rabatte bei „Show abrechnen“.</p>', { icon: 'location_city', aside: discountSel('venue') })}
-          ${card('Vertragsklauseln', kv([['Werbung', f.adClause.map(wl).join(', ') || '–', true], ['Selbstbeteiligung Behandlungskosten', f.medicalClause.map(wl).join(', ') || '–', true]]), { icon: 'gavel' })}
         </div></div>`;
     },
   };
